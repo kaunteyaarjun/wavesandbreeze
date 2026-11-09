@@ -6,12 +6,12 @@ export default function FaqSection({ onOpenInquiry }) {
 
   const faqs = [
     {
-      q: 'What is MICE management and how does Waves & Breeze operate in Bhubaneswar?',
-      a: 'MICE stands for Meetings, Incentives, Conferences, and Exhibitions. Headquartered in Old Town, Bhubaneswar, Waves and Breeze Hospitality operates as an end-to-end MICE management partner handling venue procurement, hotel blocks, flight transfers, AV staging, and live on-ground operations across Odisha and global destinations.'
+      q: 'What is MICE management and what makes Waves & Breeze the top MICE organisation in Odisha?',
+      a: 'MICE stands for Meetings, Incentives, Conferences, and Exhibitions. Headquartered in Bhubaneswar, Waves and Breeze Hospitality operates as Odisha\'s premier MICE organisation handling complete venue procurement, luxury hotel blocks, VIP transfers, stage AV engineering, and on-ground logistics across all destinations in Odisha and global circuits.'
     },
     {
-      q: 'Are you top-rated meetings organisers in Bhubaneswar?',
-      a: 'Yes, Waves and Breeze Hospitality is recognized among the premier meetings organisers in Bhubaneswar, providing direct venue booking with 5-star hotels like Mayfair Lagoon, Welcomhotel by ITC, and Vivanta, along with complete delegate hospitality and executive board offsite coordination.'
+      q: 'Are you recognized meetings organisers in Odisha?',
+      a: 'Yes, Waves and Breeze Hospitality is recognized among the premier corporate meetings organisers in Odisha and Bhubaneswar, providing direct venue booking with top 5-star properties (Mayfair Lagoon, Mayfair Waves Puri, Welcomhotel by ITC, Vivanta, Swosti Premium), along with complete delegate hospitality and executive offsite planning.'
     },
     {
       q: 'Which destinations in Odisha do you manage for corporate offsites and MICE events?',
@@ -50,7 +50,7 @@ export default function FaqSection({ onOpenInquiry }) {
             </h2>
 
             <p className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-              Common questions about corporate MICE management, meetings organisers in Bhubaneswar, and turnkey event planning.
+              Common questions about corporate MICE management, MICE organisation in Odisha, meetings organisers in Odisha, and turnkey event planning.
             </p>
 
             <button

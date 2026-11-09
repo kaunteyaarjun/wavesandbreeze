@@ -16,20 +16,20 @@ export default function WhoWeAre({ onOpenInquiry }) {
 
           {/* Big Editorial Heading in Black and Maroon */}
           <h2 className="font-display text-2xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-black leading-[1.15] sm:leading-[1.1] mb-8 sm:mb-12 max-w-5xl">
-            Your End-to-End MICE Management Partner in Bhubaneswar <br className="hidden sm:inline" />
+            Your End-to-End MICE Management Organisation in Odisha <br className="hidden sm:inline" />
             <span className="text-[#8b181b]">with international reach.</span>
           </h2>
 
-          {/* Two-Column Copy with Target SEO Keywords */}
+          {/* Two-Column Copy with Target SEO Keywords: MICE organisation in Odisha, Meetings organisers in Odisha */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-14 text-neutral-600 text-sm sm:text-lg leading-relaxed mb-8 sm:mb-10">
             <div>
               <p>
-                As the leading specialist for <strong>MICE Bhubaneswar</strong> and high-profile corporate <strong>meetings organisers in Bhubaneswar</strong>, Waves and Breeze Hospitality orchestrates executive board retreats, annual dealer meets, national trade conferences, and luxury incentive tours across Odisha.
+                As the premier <strong>MICE organisation in Odisha</strong> and high-profile corporate <strong>meetings organisers in Odisha</strong> (with operational hub in Bhubaneswar), Waves and Breeze Hospitality orchestrates executive board retreats, annual dealer meets, national trade conferences, and luxury incentive tours across the state.
               </p>
             </div>
             <div>
               <p>
-                Founded in Old Town, Bhubaneswar by Biswaranjan Behera and Sameer Kumar Panigrahi, our team provides single-point accountability for complex <strong>MICE events</strong>: 5-star venue procurement, hotel room blocks, chartered fleet transport, 3D AV stage fabrication, and live on-site event direction.
+                Founded in Old Town, Bhubaneswar by Biswaranjan Behera and Sameer Kumar Panigrahi, our team provides single-point accountability for complex <strong>MICE events in Odisha</strong>: 5-star venue procurement, hotel room blocks, chartered fleet transport, 3D AV stage fabrication, and live on-site event direction.
               </p>
             </div>
           </div>

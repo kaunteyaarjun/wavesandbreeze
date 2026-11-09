@@ -24,9 +24,9 @@ export default function Hero({ onOpenInquiry }) {
                 <span className="text-[#8b181b] block">Exhibitions</span>
               </h1>
 
-              {/* Paragraph with Target SEO Keywords */}
+              {/* Paragraph with Target SEO Keywords: MICE organisation in Odisha, MICE management, Meetings organisers */}
               <p className="text-neutral-600 text-xs xs:text-sm sm:text-lg leading-relaxed max-w-xl mb-4 sm:mb-8 font-normal">
-                Waves and Breeze Hospitality is Bhubaneswar's premier <strong>MICE management</strong> partner and top corporate <strong>meetings organisers in Bhubaneswar</strong>. From large-scale <strong>MICE events</strong>, dealer meets, and symposiums to coastal retreats in Puri and global stages in Dubai.
+                Waves and Breeze Hospitality is Odisha's premier <strong>MICE management company</strong> and leading corporate <strong>MICE organisation in Odisha</strong>. Top-rated <strong>meetings organisers in Odisha</strong> delivering turnkey conferences, dealer meets, luxury incentive offsites across Puri and Bhubaneswar, and global convention stages in Dubai.
               </p>
 
               {/* Primary Actions: Black Pill with Yellow Arrow + Text Link (Visible Above the Fold) */}
