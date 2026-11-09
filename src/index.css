@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Mobile Touch & No-Cursor Optimization */
+@media (hover: none) and (pointer: coarse) {
+  /* On touch devices, remove sticky hover artifacts and optimize tap */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Ensure active tap feedback instead of sticky hover */
+  button:active, 
+  a:active,
+  [role="button"]:active {
+    opacity: 0.85;
+    transform: scale(0.985);
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+}
+
+/* Custom scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fff033;
+  }
+}
+
+/* Momentum scrolling for iOS */
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}
