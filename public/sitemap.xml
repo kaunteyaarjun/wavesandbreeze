@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://wavesandbreeze.in/</loc>
     <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/logo.png</image:loc>
+      <image:title>Waves and Breeze Hospitality MICE Management Logo</image:title>
+      <image:caption>Premier MICE Organisation in Odisha</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/puri.jpg</image:loc>
+      <image:title>Puri Beachfront Luxury MICE Resort Galas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/bhubaneswar.jpg</image:loc>
+      <image:title>Bhubaneswar 5-Star Corporate Convention Auditoriums</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/konark.jpg</image:loc>
+      <image:title>Konark Sun Temple Heritage Glamping Offsites</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/chilika.jpg</image:loc>
+      <image:title>Chilika Lake Catamaran Charter Offsites</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/dubai.jpg</image:loc>
+      <image:title>Dubai International Convention and Incentive Travel</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://wavesandbreeze.in/#about</loc>
     <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://wavesandbreeze.in/#services</loc>
@@ -28,18 +54,18 @@
     <loc>https://wavesandbreeze.in/#process</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://wavesandbreeze.in/#founders</loc>
     <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://wavesandbreeze.in/#faqs</loc>
     <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

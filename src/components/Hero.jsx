@@ -25,7 +25,7 @@ export default function Hero({ onOpenInquiry }) {
               </h1>
 
               {/* Paragraph with Target SEO Keywords: MICE organisation in Odisha, MICE management, Meetings organisers */}
-              <p className="text-neutral-600 text-xs xs:text-sm sm:text-lg leading-relaxed max-w-xl mb-4 sm:mb-8 font-normal">
+              <p className="speakable-summary text-neutral-600 text-xs xs:text-sm sm:text-lg leading-relaxed max-w-xl mb-4 sm:mb-8 font-normal">
                 Waves and Breeze Hospitality is Odisha's premier <strong>MICE management company</strong> and leading corporate <strong>MICE organisation in Odisha</strong>. Top-rated <strong>meetings organisers in Odisha</strong> delivering turnkey conferences, dealer meets, luxury incentive offsites across Puri and Bhubaneswar, and global convention stages in Dubai.
               </p>
 

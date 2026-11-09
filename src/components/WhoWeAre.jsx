@@ -21,7 +21,7 @@ export default function WhoWeAre({ onOpenInquiry }) {
           </h2>
 
           {/* Two-Column Copy with Target SEO Keywords: MICE organisation in Odisha, Meetings organisers in Odisha */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-14 text-neutral-600 text-sm sm:text-lg leading-relaxed mb-8 sm:mb-10">
+          <div className="speakable-about grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-14 text-neutral-600 text-sm sm:text-lg leading-relaxed mb-8 sm:mb-10">
             <div>
               <p>
                 As the premier <strong>MICE organisation in Odisha</strong> and high-profile corporate <strong>meetings organisers in Odisha</strong> (with operational hub in Bhubaneswar), Waves and Breeze Hospitality orchestrates executive board retreats, annual dealer meets, national trade conferences, and luxury incentive tours across the state.
