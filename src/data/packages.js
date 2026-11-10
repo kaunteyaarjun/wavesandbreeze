@@ -96,6 +96,30 @@ export const tourPackagesData = [
     description: 'Often called the "Amazon of Odisha," Bhitarkanika National Park offers an untamed mangrove labyrinth teeming with prehistoric estuarine crocodiles, kingfishers, and rare coastal fauna.'
   },
   {
+    id: 'similipal-tiger-safari',
+    title: 'Similipal Biosphere Reserve & Barehipani Waterfall Safari',
+    duration: '4 Days / 3 Nights',
+    category: 'Wildlife & Nature',
+    badge: 'Tiger Reserve',
+    destination: 'Baripada • Jashipur • Similipal',
+    image: '/destinations/similipal.jpg',
+    idealFor: 'Wildlife Enthusiasts, Photographers & Jungle Trekking',
+    route: 'Bhubaneswar → Balasore → Baripada / Jashipur Entry Gate → Barehipani Falls → Return',
+    highlights: [
+      'Expedition deep into UNESCO World Biosphere Reserve & Tiger Reserve',
+      'Marvel at Barehipani Falls (India’s 2nd highest cascade) and Joranda Falls',
+      'Open-top 4x4 forest department jeep safaris across dense sal forest canopies',
+      'Spotting wild elephants, leopards, royal Bengal tigers, and rare melanistic tigers'
+    ],
+    inclusions: [
+      '3 Nights in OTDC Aranya Nivas / Eco-Cottages inside reserve boundary',
+      'Authorized forest entry permits & official forest department guide',
+      'Dedicated AC vehicle for road transfers & approved safari jeeps',
+      'All local meals and packed safari refreshments'
+    ],
+    description: 'Immerse in the untamed wilderness of Similipal, Asia’s vast biosphere reserve spanning cascading waterfalls, towering sal trees, and India’s famous melanistic tiger corridor.'
+  },
+  {
     id: 'puri-beachfront-mice',
     title: 'Puri Beachfront Corporate Leadership Conclave & Gala',
     duration: '3 Days / 2 Nights',

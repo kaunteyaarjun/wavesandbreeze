@@ -45,6 +45,14 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       image: '/destinations/daringbadi.jpg'
     },
     {
+      id: 'bhitarkanika',
+      name: 'Bhitarkanika & Similipal',
+      state: 'Odisha',
+      tag: 'WILDLIFE SAFARIS & WATERFALLS',
+      desc: 'Estuarine crocodile creek safaris, Barehipani waterfalls, tiger reserve canopy trails, and pristine forest eco-cottage stays.',
+      image: '/destinations/bhitarkanika.jpg'
+    },
+    {
       id: 'dubai',
       name: 'Dubai & Global',
       state: 'International Hubs',
