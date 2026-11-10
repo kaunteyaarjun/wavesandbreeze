@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MiceStrip from './components/MiceStrip';
+import TourPackagesSection from './components/TourPackagesSection';
+import FleetRentalSection from './components/FleetRentalSection';
 import WhoWeAre from './components/WhoWeAre';
 import ServicesList from './components/ServicesList';
 import StrategyToExecution from './components/StrategyToExecution';
@@ -31,41 +33,47 @@ export default function App() {
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* 2. Hero Section (MICE Event Management Company in India for Meetings...) */}
+        {/* 2. Hero Section */}
         <Hero onOpenInquiry={handleOpenInquiry} />
 
-        {/* 3. Black M-I-C-E Strip */}
+        {/* 3. Black 4-Pillar Strip (Tours • MICE • Cabs • Hotels) */}
         <MiceStrip />
 
-        {/* 4. 01 WHO WE ARE: Your End-to-End MICE Event Partner */}
+        {/* 4. Curated Odisha Tours & Holiday Packages */}
+        <TourPackagesSection onOpenInquiry={handleOpenInquiry} />
+
+        {/* 5. Verified Cab & Fleet Rentals Across Odisha */}
+        <FleetRentalSection onOpenInquiry={handleOpenInquiry} />
+
+        {/* 6. Who We Are: Trusted Odisha Travel DMC & Corporate MICE Partner */}
         <WhoWeAre onOpenInquiry={handleOpenInquiry} />
 
-        {/* 5. Complete MICE Event Management Services (Black Section) */}
+        {/* 7. Comprehensive Travel, Fleet & MICE Services */}
         <ServicesList onOpenInquiry={handleOpenInquiry} />
 
-        {/* 6. 02 FROM STRATEGY TO ON-GROUND EXECUTION */}
+        {/* 8. From Strategy to On-Ground Execution */}
         <StrategyToExecution />
 
-        {/* 7. WHY WAVES & BREEZE: One MICE Partner. Every Moving Part. (Maroon + Yellow Box) */}
+        {/* 9. Why Waves & Breeze Banner */}
         <OnePartnerBanner />
 
-        {/* 8. 03 ODISHA + GLOBAL DESTINATIONS (5 Places: Puri, Bhubaneswar, Konark, Chilika, Dubai) */}
+        {/* 10. Destinations Showcase (Puri, Bhubaneswar, Konark, Chilika, Daringbadi, Dubai) */}
         <DestinationsShowcase onOpenInquiry={handleOpenInquiry} />
 
-        {/* 9. MICE EVENT PLANNING PROCESS: Clear Process. Seamless Execution. (Vivid Yellow Section) */}
+        {/* 11. Planning Process */}
         <ProcessSection />
 
-        {/* 10. 04 EXECUTIVE LEADERSHIP: Biswaranjan Behera & Sameer Kumar Panigrahi */}
+        {/* 12. Leadership / Founders */}
         <FoundersSection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 11. 05 FREQUENTLY ASKED QUESTIONS */}
+        {/* 13. Frequently Asked Questions */}
         <FaqSection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 12. Pre-Footer Dual CTA Banners */}
+        {/* 14. Pre-Footer Dual CTA Banners */}
         <PreFooterCtas onOpenInquiry={handleOpenInquiry} />
       </main>
 
-      {/* 13. Footer */}
+      {/* 15. Footer */}
       <Footer />
 
       {/* Quick Inquiry Modal */}

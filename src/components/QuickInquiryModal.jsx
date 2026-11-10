@@ -20,10 +20,10 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
     company: '',
     phone: '',
     email: '',
-    destination: initialData?.destination || 'Puri, Odisha',
-    delegates: initialData?.delegates || '50 - 150 Delegates',
-    eventType: initialData?.service || 'Corporate Annual Conference',
-    datePreference: 'Within 3 Months',
+    destination: initialData?.destination || 'Puri & Golden Triangle',
+    delegates: initialData?.delegates || '2 - 6 Travelers (Family / Small Group)',
+    eventType: initialData?.service || 'Odisha Tour Package',
+    datePreference: 'Flexible Dates',
     notes: initialData?.notes || ''
   });
 
@@ -46,7 +46,7 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
   const handleSendViaWhatsApp = (e) => {
     if (e) e.preventDefault();
     const text = encodeURIComponent(
-      `Hello Waves and Breeze Hospitality! 👋\n\nI want to plan a corporate MICE Management Program:\n• Name: ${formData.name || 'Corporate Planner'}\n• Organization: ${formData.company || 'Enterprise Brand'}\n• Phone: ${formData.phone || 'Direct Mobile'}\n• Email: ${formData.email || 'Not provided'}\n• Destination: ${formData.destination}\n• Event Type: ${formData.eventType}\n• Delegate Count: ${formData.delegates}\n• Timeline: ${formData.datePreference}\n• Notes: ${formData.notes || 'Looking for venue options and turnkey execution.'}`
+      `Hello Waves and Breeze Hospitality! 👋\n\nI would like to inquire about:\n• Service / Package: ${formData.eventType}\n• Destination: ${formData.destination}\n• Group Size / Travellers: ${formData.delegates}\n• Name: ${formData.name || 'Traveler / Planner'}\n• Organization / Family: ${formData.company || 'Private Inquiry'}\n• Phone: ${formData.phone || 'Direct Mobile'}\n• Email: ${formData.email || 'Not provided'}\n• Notes / Dates: ${formData.notes || 'Looking for best itinerary & competitive quote.'}`
     );
     window.open(`https://wa.me/${teamData.founders[0].whatsapp}?text=${text}`, '_blank');
     setSubmitted(true);
@@ -101,13 +101,13 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none bg-[#fff033] text-black text-[11px] font-extrabold uppercase tracking-wider mb-1.5">
                 <Sparkles className="w-3 h-3 text-black" />
-                Custom MICE Management Proposal
+                Odisha Tours • Cabs • Corporate MICE
               </div>
               <h3 className="font-display text-2xl font-bold text-neutral-900">
-                Plan Your MICE Program
+                Plan Your Journey &amp; Event
               </h3>
               <p className="text-xs text-neutral-500">
-                Direct turnaround from our Bhubaneswar operational headquarters via WhatsApp.
+                Direct quotation &amp; customized itinerary from our Bhubaneswar headquarters via WhatsApp.
               </p>
             </div>
 
@@ -124,11 +124,10 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">Organization *</label>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Company / Group Name</label>
                 <input
                   type="text"
-                  required
-                  placeholder="e.g. Enterprise / Corporate Brand"
+                  placeholder="e.g. Family / Enterprise Brand"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-black"
@@ -138,7 +137,7 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Phone Number (WhatsApp) *</label>
                 <input
                   type="tel"
                   required
@@ -149,14 +148,18 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
-                <input
-                  type="email"
-                  placeholder="work@company.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-black"
-                />
+                <label className="block text-xs font-bold text-slate-700 mb-1">Service / Requirement</label>
+                <select
+                  value={formData.eventType}
+                  onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
+                  className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white"
+                >
+                  <option value="Odisha Holiday / Family Tour Package">Odisha Tour &amp; Holiday Package</option>
+                  <option value="Corporate MICE / Offsite / Conference">Corporate MICE / Offsite / Conclave</option>
+                  <option value="Puri Jagannath VIP Darshan & Golden Triangle">Puri Jagannath VIP Darshan &amp; Coastal</option>
+                  <option value="Cab & Fleet Rental (Innova / Coach)">Cab &amp; Fleet Rental (Innova / Coach)</option>
+                  <option value="Luxury Hotel / Eco-Retreat Booking">5-Star Hotel &amp; Eco-Retreat Booking</option>
+                </select>
               </div>
             </div>
 
@@ -168,34 +171,36 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
                   onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                   className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white"
                 >
-                  <option value="Puri, Odisha">Puri (Golden Beach & Coastal Luxury)</option>
-                  <option value="Bhubaneswar, Odisha">Bhubaneswar (5-Star Conventions & Auditoriums)</option>
-                  <option value="Konark, Odisha">Konark (Sun Temple & Eco-Retreat Glamping)</option>
-                  <option value="Chilika Lake, Odisha">Chilika Lake (Catamarans & Island Offsites)</option>
-                  <option value="Dubai & International">Dubai & Global International Stages</option>
+                  <option value="Puri & Golden Triangle">Puri &amp; Golden Triangle (Bhubaneswar-Konark)</option>
+                  <option value="Chilika Lake & Mangalajodi">Chilika Lake &amp; Mangalajodi Bird Sanctuary</option>
+                  <option value="Daringbadi Hill Station">Daringbadi (Kashmir of Odisha)</option>
+                  <option value="Bhitarkanika Wildlife Safari">Bhitarkanika Mangrove &amp; Crocodile Safari</option>
+                  <option value="Bhubaneswar City / Airport Cab">Bhubaneswar (Conventions &amp; Airport Cabs)</option>
+                  <option value="Dubai & International MICE">Dubai &amp; International MICE / Excursions</option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">Delegate Count</label>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Group Size / Travellers</label>
                 <select
                   value={formData.delegates}
                   onChange={(e) => setFormData({ ...formData, delegates: e.target.value })}
                   className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white"
                 >
-                  <option value="20 - 50 Guests (VIP / Board)">20 - 50 Guests (VIP / Board)</option>
-                  <option value="50 - 150 Guests (Regional)">50 - 150 Guests (Regional)</option>
-                  <option value="150 - 500 Guests (National)">150 - 500 Guests (National)</option>
-                  <option value="500 - 2,500+ Guests (Mega Convention)">500 - 2,500+ Guests (Mega Convention)</option>
+                  <option value="1 - 3 Travelers (Couple / Solo)">1 - 3 Travelers (Couple / Solo)</option>
+                  <option value="4 - 7 Travelers (Family / Innova)">4 - 7 Travelers (Family / Innova)</option>
+                  <option value="8 - 25 Travelers (Group / Tempo Traveller)">8 - 25 Travelers (Group / Tempo Traveller)</option>
+                  <option value="25 - 100+ Delegates (Corporate Offsite)">25 - 100+ Delegates (Corporate Offsite)</option>
+                  <option value="100 - 1000+ Guests (Mega Convention / Expo)">100 - 1000+ Guests (Mega Convention / Expo)</option>
                 </select>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">Brief Description / Requirements</label>
+              <label className="block text-xs font-bold text-slate-700 mb-1">Travel Dates &amp; Notes</label>
               <textarea
                 rows={2}
-                placeholder="Preferred dates, venue preferences, AV/production specs..."
+                placeholder="Preferred travel dates, pick-up location, hotel preference, custom requests..."
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                 className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm"

@@ -36,27 +36,27 @@ export default function Navbar({ onOpenInquiry }) {
                 Waves &amp; Breeze
               </span>
               <span className="text-[9px] sm:text-[10px] lg:text-[11px] font-bold tracking-widest uppercase text-neutral-500">
-                Hospitality • MICE Management
+                ODISHA TRAVEL DMC • TOURS • MICE
               </span>
             </div>
           </a>
 
           {/* Center Navigation Links - Desktop Only */}
-          <nav className="hidden lg:flex items-center gap-7 xl:gap-8 text-[15px] font-medium text-neutral-700">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-medium text-neutral-700">
             <a href="#" className="hover:text-black transition-colors">
               Home
             </a>
-            <a href="#about" className="hover:text-black transition-colors">
-              About
+            <a href="#packages" className="hover:text-black transition-colors">
+              Tours &amp; Packages
+            </a>
+            <a href="#fleet" className="hover:text-black transition-colors">
+              Cab Rentals
             </a>
             <a href="#services" className="hover:text-black transition-colors">
-              MICE Management
+              Corporate MICE
             </a>
             <a href="#destinations" className="hover:text-black transition-colors">
               Destinations
-            </a>
-            <a href="#process" className="hover:text-black transition-colors">
-              Process
             </a>
             <a href="#founders" className="hover:text-black transition-colors">
               Founders
@@ -113,32 +113,32 @@ export default function Navbar({ onOpenInquiry }) {
               Home
             </a>
             <a 
-              href="#about" 
+              href="#packages" 
               onClick={() => setMobileMenuOpen(false)} 
               className="block text-xl font-bold text-black border-b border-neutral-100 pb-3"
             >
-              About Us
+              Odisha Tours &amp; Packages
+            </a>
+            <a 
+              href="#fleet" 
+              onClick={() => setMobileMenuOpen(false)} 
+              className="block text-xl font-bold text-black border-b border-neutral-100 pb-3"
+            >
+              Cab &amp; Fleet Rentals
             </a>
             <a 
               href="#services" 
               onClick={() => setMobileMenuOpen(false)} 
               className="block text-xl font-bold text-black border-b border-neutral-100 pb-3"
             >
-              MICE Management Services
+              Corporate MICE Management
             </a>
             <a 
               href="#destinations" 
               onClick={() => setMobileMenuOpen(false)} 
               className="block text-xl font-bold text-black border-b border-neutral-100 pb-3"
             >
-              Destinations (Puri, Bhubaneswar, Konark, Chilika, Dubai)
-            </a>
-            <a 
-              href="#process" 
-              onClick={() => setMobileMenuOpen(false)} 
-              className="block text-xl font-bold text-black border-b border-neutral-100 pb-3"
-            >
-              Management Process
+              Destinations (Puri, Chilika, Daringbadi, Dubai)
             </a>
             <a 
               href="#founders" 

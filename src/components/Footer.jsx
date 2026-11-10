@@ -26,13 +26,13 @@ export default function Footer() {
                   Waves &amp; Breeze
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-[#fff033] font-bold">
-                  Hospitality • MICE Management
+                  Odisha Travel DMC • Tours • MICE
                 </span>
               </div>
             </div>
 
             <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-              End-to-end MICE management for corporate enterprises, brands, and executive teams across Odisha, Pan India, and international destinations.
+              Odisha's premier Travel DMC &amp; MICE organization: Curated Odisha Tour Packages, verified Cab &amp; Fleet rentals, and end-to-end Corporate MICE Management for families, pilgrims, and enterprises.
             </p>
 
             <div className="space-y-2 text-xs text-neutral-400 pt-1">
@@ -82,23 +82,23 @@ export default function Footer() {
           {/* Links Column 2: Services */}
           <div className="lg:col-span-3 space-y-3 sm:space-y-4">
             <h4 className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-neutral-400">
-              MICE Management
+              Tours &amp; Services
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-neutral-300">
               <li>
-                <a href="#services" className="hover:text-white transition-colors block py-1">Corporate Meetings</a>
+                <a href="#packages" className="hover:text-white transition-colors block py-1">Odisha Tour Packages</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors block py-1">MICE Incentive Travel</a>
+                <a href="#fleet" className="hover:text-white transition-colors block py-1">Cab &amp; Fleet Rentals</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors block py-1">Conference Management</a>
+                <a href="#packages" className="hover:text-white transition-colors block py-1">Puri &amp; Golden Triangle</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors block py-1">Exhibition Management</a>
+                <a href="#services" className="hover:text-white transition-colors block py-1">Corporate MICE &amp; Offsites</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors block py-1">5-Star Hotel Alliances</a>
+                <a href="#destinations" className="hover:text-white transition-colors block py-1">Eco-Retreat &amp; Hotel Bookings</a>
               </li>
             </ul>
           </div>
@@ -143,7 +143,7 @@ export default function Footer() {
             &copy; {currentYear} Waves and Breeze Hospitality. All Rights Reserved.
           </p>
           <div className="font-extrabold uppercase tracking-widest text-neutral-400 text-[10px] sm:text-[11px]">
-            MEETINGS • INCENTIVES • CONFERENCES • EXHIBITIONS
+            ODISHA TOURS • CAB RENTALS • RESORTS • CORPORATE MICE
           </div>
           <div className="flex items-center gap-3 text-neutral-500 text-[11px]">
             <span>Bhubaneswar, Odisha</span>

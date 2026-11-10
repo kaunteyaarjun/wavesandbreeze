@@ -15,38 +15,45 @@ export default function Hero({ onOpenInquiry }) {
             
             <FadeContent trigger="mount" duration={0.9} delay={0.1} ease="power2.out">
               {/* Massive Editorial Headline */}
-              <h1 className="font-display text-[29px] xs:text-[34px] sm:text-6xl lg:text-[72px] font-medium tracking-tight text-black leading-[1.06] sm:leading-[1.05] mb-3.5 sm:mb-6">
-                MICE Management<br />
-                Company in India<br />
-                <span className="text-[#8b181b] block">for Meetings,</span>
-                <span className="text-[#8b181b] block">Incentives,</span>
-                <span className="text-[#8b181b] block">Conferences &amp;</span>
-                <span className="text-[#8b181b] block">Exhibitions</span>
+              <h1 className="font-display text-[28px] xs:text-[33px] sm:text-6xl lg:text-[70px] font-medium tracking-tight text-black leading-[1.06] sm:leading-[1.05] mb-3.5 sm:mb-6">
+                Premier Travel &amp;<br />
+                MICE Organisation in Odisha<br />
+                <span className="text-[#8b181b] block">for Curated Tours,</span>
+                <span className="text-[#8b181b] block">Puri &amp; Heritage Holidays,</span>
+                <span className="text-[#8b181b] block">Corporate Offsites &amp;</span>
+                <span className="text-[#8b181b] block">Global Conventions</span>
               </h1>
 
-              {/* Paragraph with Target SEO Keywords: MICE organisation in Odisha, MICE management, Meetings organisers */}
+              {/* Paragraph with Target SEO Keywords: Odisha holiday packages, MICE organisation in Odisha, Travel DMC */}
               <p className="speakable-summary text-neutral-600 text-xs xs:text-sm sm:text-lg leading-relaxed max-w-xl mb-4 sm:mb-8 font-normal">
-                Waves and Breeze Hospitality is Odisha's premier <strong>MICE management company</strong> and leading corporate <strong>MICE organisation in Odisha</strong>. Top-rated <strong>meetings organisers in Odisha</strong> delivering turnkey conferences, dealer meets, luxury incentive offsites across Puri and Bhubaneswar, and global convention stages in Dubai.
+                Waves and Breeze Hospitality is Odisha's premier <strong>Destination Management Company (DMC)</strong> and leading corporate <strong>MICE organisation in Odisha</strong>. From handcrafted <strong>Odisha holiday packages</strong>, Jagannath Puri temple darshan tours, and Chilika dolphin safaris to executive board meetings, dealer summits, and verified luxury fleet rentals across Odisha.
               </p>
 
-              {/* Primary Actions: Black Pill with Yellow Arrow + Text Link (Visible Above the Fold) */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-6 mb-4 sm:mb-8">
-                <button
-                  onClick={() => onOpenInquiry()}
+              {/* Primary Actions: Black Pill with Yellow Arrow + MICE Button + Fleet Link */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-4 sm:mb-8">
+                <a
+                  href="#packages"
                   className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 bg-black active:bg-neutral-800 text-white rounded-full pl-5 sm:pl-7 pr-2 py-2 sm:py-2.5 font-bold text-sm sm:text-base transition-all group shadow-sm active:scale-98"
                 >
-                  <span>Plan Your MICE Program</span>
+                  <span>Explore Odisha Packages</span>
                   <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#fff033] text-black flex items-center justify-center font-bold shrink-0">
                     <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
+                </a>
+
+                <button
+                  onClick={() => onOpenInquiry({ eventType: 'Corporate MICE Management' })}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-black border border-black hover:bg-neutral-50 px-5 py-2.5 rounded-full transition-all active:scale-98"
+                >
+                  <span>Corporate MICE Offsites</span>
                 </button>
 
                 <a
-                  href="#services"
-                  className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-base font-semibold text-black hover:text-neutral-600 py-1 sm:py-2 transition-colors group active:opacity-75"
+                  href="#fleet"
+                  className="inline-flex items-center justify-center sm:justify-start gap-1.5 text-xs sm:text-sm font-semibold text-neutral-700 hover:text-black py-1 transition-colors group"
                 >
-                  <span>Explore MICE Management Services</span>
-                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+                  <span>Cab &amp; Fleet Rentals</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
 
@@ -75,14 +82,14 @@ export default function Hero({ onOpenInquiry }) {
                       360°
                     </div>
                     <p className="text-[9.5px] font-bold leading-tight text-black">
-                      Planning, production, travel &amp; management.
+                      Tours, Luxury Stays, Cabs &amp; MICE.
                     </p>
                   </div>
 
                   {/* Bottom Tag */}
                   <div className="absolute right-2.5 bottom-2.5 text-right z-10">
                     <span className="text-[8.5px] font-extrabold uppercase tracking-widest text-neutral-400 block">
-                      MICE MANAGEMENT
+                      DMC &amp; MICE ORGANISATION
                     </span>
                     <span className="text-white font-bold text-xs">
                       Odisha + Global
@@ -112,14 +119,14 @@ export default function Hero({ onOpenInquiry }) {
                     360°
                   </div>
                   <p className="text-xs sm:text-[13px] font-bold leading-tight text-black">
-                    Planning, production, travel, logistics &amp; management.
+                    Tours, Luxury Stays, Fleet &amp; MICE Management.
                   </p>
                 </div>
 
                 {/* Bottom black tag */}
                 <div className="absolute right-4 bottom-4 text-right z-10">
                   <span className="text-[11px] font-extrabold uppercase tracking-widest text-neutral-400 block">
-                    END-TO-END MICE MANAGEMENT
+                    ODISHA TRAVEL DMC &amp; MICE
                   </span>
                   <span className="text-white font-bold text-lg sm:text-xl">
                     Odisha + Global

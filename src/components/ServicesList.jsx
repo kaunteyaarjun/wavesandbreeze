@@ -6,23 +6,23 @@ export default function ServicesList({ onOpenInquiry }) {
   const services = [
     {
       num: '01',
-      title: 'Corporate Meetings & Executive Gatherings',
-      desc: 'Board meetings, leadership councils, sales kick-offs, annual strategy offsites, and professional business event management.',
+      title: 'Curated Odisha Tour Packages & Heritage Holidays',
+      desc: 'Handcrafted leisure itineraries across Puri, Konark, Chilika Lake, Daringbadi, and Bhitarkanika. Includes VIP Jagannath temple darshan, luxury beachside stays, private chauffeur transfers, and authentic Odia dining.',
     },
     {
       num: '02',
-      title: 'MICE Incentive Travel Management',
-      desc: 'Destination selection, 5-star beachfront resorts, chartered catamaran cruises on Chilika, curated Odia heritage tours, hospitality, and group travel management across Odisha and international hubs.',
+      title: 'Corporate MICE Management & Executive Offsites',
+      desc: 'Turnkey corporate event management across Odisha and Dubai: executive board meetings, CXO summits, annual sales kick-offs, dealer incentive tours, award gala nights, and technical 4K LED audio-visual production.',
     },
     {
       num: '03',
-      title: 'Conference & Symposium Management',
-      desc: 'Venue selection, delegate registration desks, multi-hall acoustic rigging, 3D LED stage production, branding, VIP speaker hospitality, and live operations.',
+      title: 'Verified Cab & Fleet Rentals Across Odisha',
+      desc: 'Spotless private transport fleet: AC Sedans (Dzire), Premium SUVs (Innova Crysta), Luxury Mini-Coaches (Force Urbania / Tempo Traveller), and heavy Volvo coaches with punctual, verified local chauffeurs.',
     },
     {
       num: '04',
-      title: 'Exhibition & Trade Fair Management',
-      desc: 'Exhibition planning, German hangar structural fabrication, modular stall coordination, trade branding, exhibitor support, logistics, and complete on-ground management.',
+      title: 'Luxury Hotel Bookings & Eco-Retreat Reservations',
+      desc: 'Direct preferred corporate and holiday tariffs with leading hospitality brands: Mayfair Hotels & Resorts, Sterling Puri, Welcomhotel by ITC, Vivanta, Swosti, and luxury beachside Swiss glamping camps.',
     },
   ];
 
@@ -35,20 +35,20 @@ export default function ServicesList({ onOpenInquiry }) {
           <div className="flex items-center gap-2 mb-4 sm:mb-6">
             <span className="w-2.5 h-2.5 rounded-full bg-[#fff033] shrink-0"></span>
             <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#fff033]">
-              MICE MANAGEMENT SERVICES
+              TRAVEL DMC &amp; MICE SERVICES
             </span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14 items-end mb-10 sm:mb-16 pb-8 sm:pb-10 border-b border-neutral-800">
             <div className="lg:col-span-8">
               <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.1] sm:leading-[1.08]">
-                Complete MICE Management<br />
-                Services &amp; Capabilities
+                Complete Odisha Travel<br />
+                &amp; MICE Capabilities
               </h2>
             </div>
             <div className="lg:col-span-4">
               <p className="text-neutral-400 text-sm sm:text-base leading-relaxed font-normal">
-                From corporate meetings and luxury incentive travel to multi-day conferences, trade exhibitions, and destination logistics, our MICE management solutions ensure flawless corporate execution.
+                Whether you need a bespoke family holiday across Puri and Chilika, verified cab rentals, or a 1,500-delegate corporate convention, we deliver seamless hospitality backed by native Odisha mastery.
               </p>
             </div>
           </div>
