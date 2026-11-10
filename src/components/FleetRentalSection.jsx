@@ -117,3 +117,4 @@ export default function FleetRentalSection({ onOpenInquiry }) {
     </section>
   );
 }
+

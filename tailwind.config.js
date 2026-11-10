@@ -27,6 +27,8 @@ export default {
         display: ['"Manrope"', 'sans-serif'],
         manrope: ['"Manrope"', 'sans-serif'],
         dmsans: ['"DM Sans"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        playfair: ['"Playfair Display"', 'Georgia', 'serif'],
       },
       boxShadow: {
         'glow-gold': '0 0 25px -5px rgba(203, 161, 53, 0.3)',
