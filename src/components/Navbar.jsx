@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, Search, Plane, ArrowRight } from 'lucide-react';
+import { Phone, Menu, X, Search, Plane, ArrowRight, ChevronDown } from 'lucide-react';
 import { teamData } from '../data/team';
 
 // Social SVG Icons
@@ -15,7 +15,6 @@ const FacebookIcon = ({ className = "w-3 h-3" }) => (
   </svg>
 );
 
-// WhatsApp icon
 const WhatsAppIcon = ({ className = "w-3.5 h-3.5" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -24,6 +23,7 @@ const WhatsAppIcon = ({ className = "w-3.5 h-3.5" }) => (
 
 export default function Navbar({ onOpenInquiry }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeMegaMenu, setActiveMegaMenu] = useState(null); // 'odisha' | 'india' | 'international' | 'cabs' | null
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -85,7 +85,10 @@ export default function Navbar({ onOpenInquiry }) {
       </div>
 
       {/* 2. FLOATING WHITE ROUNDED PILL NAVIGATION BAR */}
-      <div className="bg-[#fcfaf6]/95 backdrop-blur-md py-2 sm:py-2.5 px-3 sm:px-6 border-b border-neutral-200">
+      <div 
+        className="bg-[#fcfaf6]/95 backdrop-blur-md py-2 sm:py-2.5 px-3 sm:px-6 border-b border-neutral-200 relative"
+        onMouseLeave={() => setActiveMegaMenu(null)}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           
           {/* Logo Brand on Left */}
@@ -106,7 +109,7 @@ export default function Navbar({ onOpenInquiry }) {
             </div>
           </a>
 
-          {/* Center Navigation Links - Desktop Only (Matching Reference System) */}
+          {/* Center Navigation Links with Dropdown Triggers */}
           <nav className="hidden lg:flex items-center gap-1 text-[13px] xl:text-[14px] font-bold text-neutral-700">
             <a 
               href="#" 
@@ -114,21 +117,56 @@ export default function Navbar({ onOpenInquiry }) {
             >
               Home
             </a>
-            <a href="#packages" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
-              Odisha Packages
-            </a>
+
+            {/* Odisha ▾ */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveMegaMenu('odisha')}
+            >
+              <button className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold">
+                <span>Odisha</span>
+                <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+              </button>
+            </div>
+
+            {/* India ▾ (Exact Match to Screenshot 2) */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveMegaMenu('india')}
+            >
+              <button className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold">
+                <span>India</span>
+                <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+              </button>
+            </div>
+
+            {/* International ▾ (Exact Match to Screenshots 3 & 4) */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveMegaMenu('international')}
+            >
+              <button className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold">
+                <span>International</span>
+                <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+              </button>
+            </div>
+
+            {/* Cabs ▾ */}
             <a href="#fleet" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
               Cabs &amp; Fleet
             </a>
-            <a href="#destinations" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
-              Destinations
-            </a>
+
+            {/* Corporate MICE */}
             <a href="#services" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
               Corporate MICE
             </a>
-            <a href="#founders" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
-              Founders
+
+            {/* About Us */}
+            <a href="#about" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
+              About Us
             </a>
+
+            {/* Contact / FAQs */}
             <a href="#faqs" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
               FAQs
             </a>
@@ -175,6 +213,357 @@ export default function Navbar({ onOpenInquiry }) {
           </div>
 
         </div>
+
+        {/* =========================================================================
+            3. MEGA-MENU FLYOUT CONTAINERS (100% Match to Screenshots 2, 3, 4)
+           ========================================================================= */}
+
+        {/* MEGA-MENU 1: INDIA PACKAGES (Screenshot 2) */}
+        {activeMegaMenu === 'india' && (
+          <div 
+            className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full mt-1 w-full max-w-5xl bg-[#fdfbf7] border border-[#e5dcd0] shadow-2xl rounded-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-150"
+            onMouseEnter={() => setActiveMegaMenu('india')}
+            onMouseLeave={() => setActiveMegaMenu(null)}
+          >
+            <div className="grid grid-cols-12 gap-6 p-6">
+              
+              {/* Left Promotional Image Card */}
+              <div className="col-span-3 rounded-xl overflow-hidden relative shadow-md bg-neutral-900 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" 
+                  alt="India Desert Tours" 
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+                <div className="absolute bottom-5 left-4 right-4 z-10 text-white">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#f5b324] block mb-1">
+                    INDIA TOURS
+                  </span>
+                  <h3 className="font-serif text-2xl font-bold leading-tight mb-1">
+                    India packages
+                  </h3>
+                  <p className="font-serif italic text-xs text-neutral-200 mb-3">
+                    Kashmir to Kerala, planned from here.
+                  </p>
+                  <a 
+                    href="#packages" 
+                    className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-black bg-[#f5b324] px-3 py-1.5 rounded-full hover:bg-white transition-colors"
+                  >
+                    <span>VIEW TOURS</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Center & Right 3 Columns */}
+              <div className="col-span-9 space-y-4">
+                
+                {/* Top Category Tags */}
+                <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-neutral-500 border-b border-[#ebdccf] pb-2">
+                  <span className="text-[#d97706]">POPULAR</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">HONEYMOON</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">FAMILY</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">HERITAGE</span>
+                </div>
+
+                <div className="grid grid-cols-3 gap-6 text-xs">
+                  
+                  {/* Column 1: Tour packages */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
+                      Tour packages
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Kashmir - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Kerala - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Sikkim - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Darjeeling - 5 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Andaman - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Rajasthan - 8 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°07</strong> Goa - 5 Days</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 2: Honeymoon Packages */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200 flex items-center gap-1">
+                      <span>💖 Honeymoon Packages</span>
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Kerala Honeymoon - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Kashmir Honeymoon - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Andaman Honeymoon - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Sikkim Honeymoon - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Meghalaya Honeymoon - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Rajasthan Honeymoon - 7 Days</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 3: Family Packages */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200 flex items-center gap-1">
+                      <span>👨‍👩‍👧 Family Packages</span>
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Kerala Family - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Kashmir Family - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Andaman Family - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Rajasthan Family - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Sikkim Family - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Himachal Family - 7 Days</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                {/* Bottom Bar inside mega menu */}
+                <div className="pt-3 border-t border-[#ebdccf] flex items-center justify-between text-xs text-neutral-600">
+                  <a href="#packages" className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
+                    <span>View all India tour packages</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                  <span className="text-neutral-400">All itineraries custom-crafted from Bhubaneswar</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        )}
+
+        {/* MEGA-MENU 2: INTERNATIONAL PACKAGES (Screenshots 3 & 4) */}
+        {activeMegaMenu === 'international' && (
+          <div 
+            className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full mt-1 w-full max-w-5xl bg-[#fdfbf7] border border-[#e5dcd0] shadow-2xl rounded-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-150"
+            onMouseEnter={() => setActiveMegaMenu('international')}
+            onMouseLeave={() => setActiveMegaMenu(null)}
+          >
+            <div className="grid grid-cols-12 gap-6 p-6">
+              
+              {/* Left Promotional Image Card */}
+              <div className="col-span-3 rounded-xl overflow-hidden relative shadow-md bg-neutral-900 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" 
+                  alt="International Tours" 
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+                <div className="absolute bottom-5 left-4 right-4 z-10 text-white">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#f5b324] block mb-1">
+                    WORLD TOURS
+                  </span>
+                  <h3 className="font-serif text-2xl font-bold leading-tight mb-1">
+                    International packages
+                  </h3>
+                  <p className="font-serif italic text-xs text-neutral-200 mb-3">
+                    Dubai, Europe, Asia and more.
+                  </p>
+                  <a 
+                    href="#packages" 
+                    className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-black bg-[#f5b324] px-3 py-1.5 rounded-full hover:bg-white transition-colors"
+                  >
+                    <span>VIEW TOURS</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Center & Right 3 Columns */}
+              <div className="col-span-9 space-y-4">
+                
+                {/* Top Category Tags */}
+                <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-neutral-500 border-b border-[#ebdccf] pb-2">
+                  <span className="text-[#d97706]">POPULAR</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">WORLD</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">EUROPE</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">HONEYMOON</span>
+                </div>
+
+                <div className="grid grid-cols-3 gap-6 text-xs">
+                  
+                  {/* Column 1: Tour packages */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
+                      Tour packages
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Dubai - 5 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Thailand - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Bali - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Singapore - 5 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Vietnam - 8 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Maldives - 5 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°07</strong> Europe - 10 Days</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 2: Gulf, Europe & Groups */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
+                      Gulf, Europe &amp; Groups
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Abu Dhabi - 5 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Turkey - 8 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Switzerland - 7 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Egypt - 8 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Spain - 8 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Uzbekistan - 7 Days</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 3: Honeymoon Packages */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200 flex items-center gap-1">
+                      <span>💖 Honeymoon Packages</span>
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Bali Honeymoon - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Maldives Honeymoon - 5 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Europe Honeymoon - 8 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Switzerland Honeymoon - 6 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Paris Honeymoon - 5 Days</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Dubai Honeymoon - 5 Days</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                {/* Bottom Bar inside mega menu */}
+                <div className="pt-3 border-t border-[#ebdccf] flex items-center justify-between text-xs text-neutral-600">
+                  <a href="#packages" className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
+                    <span>View all International packages</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                  <span className="text-neutral-400">Complete visa, flight &amp; hotel assistance from Bhubaneswar</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        )}
+
+        {/* MEGA-MENU 3: ODISHA DMC & CIRCUITS */}
+        {activeMegaMenu === 'odisha' && (
+          <div 
+            className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full mt-1 w-full max-w-5xl bg-[#fdfbf7] border border-[#e5dcd0] shadow-2xl rounded-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-150"
+            onMouseEnter={() => setActiveMegaMenu('odisha')}
+            onMouseLeave={() => setActiveMegaMenu(null)}
+          >
+            <div className="grid grid-cols-12 gap-6 p-6">
+              
+              {/* Left Promotional Image Card */}
+              <div className="col-span-3 rounded-xl overflow-hidden relative shadow-md bg-neutral-900 group">
+                <img 
+                  src="/destinations/jagannath.jpg" 
+                  alt="Odisha Golden Triangle" 
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+                <div className="absolute bottom-5 left-4 right-4 z-10 text-white">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#f5b324] block mb-1">
+                    ODISHA TOURS
+                  </span>
+                  <h3 className="font-serif text-2xl font-bold leading-tight mb-1">
+                    Odisha packages
+                  </h3>
+                  <p className="font-serif italic text-xs text-neutral-200 mb-3">
+                    Temple coasts, tribal trails &amp; lagoon mornings.
+                  </p>
+                  <a 
+                    href="#packages" 
+                    className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-black bg-[#f5b324] px-3 py-1.5 rounded-full hover:bg-white transition-colors"
+                  >
+                    <span>VIEW TOURS</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Center & Right 3 Columns */}
+              <div className="col-span-9 space-y-4">
+                
+                {/* Top Category Tags */}
+                <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-neutral-500 border-b border-[#ebdccf] pb-2">
+                  <span className="text-[#d97706]">HERITAGE</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">WILDLIFE &amp; NATURE</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">HILL STATIONS</span>
+                  <span>❖</span>
+                  <span className="hover:text-black cursor-pointer">CAB RENTALS</span>
+                </div>
+
+                <div className="grid grid-cols-3 gap-6 text-xs">
+                  
+                  {/* Column 1: Signature Circuits */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
+                      Signature Odisha Circuits
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Golden Triangle (Puri-Konark-BBSR)</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Chilika Lagoon &amp; Dolphin Safari</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Daringbadi (Kashmir of Odisha)</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Bhitarkanika Mangrove Safari</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Similipal Tiger Reserve &amp; Falls</a></li>
+                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Puri VIP Jagannath Darshan</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 2: Cab & Fleet Rentals */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
+                      Verified Cab Fleet
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Toyota Innova Crysta (6-7 Seats)</a></li>
+                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Swift Dzire / Sedan (4 Seats)</a></li>
+                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Force Urbania (12-17 Seats)</a></li>
+                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Volvo Luxury AC Bus (35-45 Seats)</a></li>
+                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Bhubaneswar to Puri Cab (₹1,499)</a></li>
+                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> BBI Airport Pick-and-Drop</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 3: MICE & Luxury Stays */}
+                  <div>
+                    <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
+                      Corporate MICE &amp; Stays
+                    </h4>
+                    <ul className="space-y-2 text-neutral-700">
+                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Puri Oceanfront Conclaves</a></li>
+                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Bhubaneswar Mega Conventions</a></li>
+                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Eco-Retreat Glamping Bookings</a></li>
+                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> 5-Star Hotel Alliances (Mayfair/ITC)</a></li>
+                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Dealer Incentive Meets</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                {/* Bottom Bar inside mega menu */}
+                <div className="pt-3 border-t border-[#ebdccf] flex items-center justify-between text-xs text-neutral-600">
+                  <a href="#packages" className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
+                    <span>View all Odisha tour packages</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                  <span className="text-neutral-400">Headquartered in Old Town, Bhubaneswar</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        )}
+
       </div>
 
       {/* Mobile Full Screen Drawer Menu */}
@@ -196,18 +585,25 @@ export default function Navbar({ onOpenInquiry }) {
               Odisha Tour Packages
             </a>
             <a 
+              href="#packages" 
+              onClick={() => setMobileMenuOpen(false)} 
+              className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
+            >
+              India Tour Packages (Kashmir, Goa, Kerala)
+            </a>
+            <a 
+              href="#packages" 
+              onClick={() => setMobileMenuOpen(false)} 
+              className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
+            >
+              International Packages (Dubai, Singapore, Thailand)
+            </a>
+            <a 
               href="#fleet" 
               onClick={() => setMobileMenuOpen(false)} 
               className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
             >
               Cabs &amp; Fleet Rentals
-            </a>
-            <a 
-              href="#destinations" 
-              onClick={() => setMobileMenuOpen(false)} 
-              className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
-            >
-              Destinations (Puri, Konark, Chilika, Daringbadi)
             </a>
             <a 
               href="#services" 
@@ -217,11 +613,11 @@ export default function Navbar({ onOpenInquiry }) {
               Corporate MICE Management
             </a>
             <a 
-              href="#founders" 
+              href="#about" 
               onClick={() => setMobileMenuOpen(false)} 
               className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
             >
-              Founders &amp; Leadership
+              About Us
             </a>
             <a 
               href="#faqs" 
