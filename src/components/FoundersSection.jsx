@@ -78,7 +78,7 @@ export default function FoundersSection({ onOpenInquiry }) {
                 <div className="flex items-center justify-between gap-4 text-xs sm:text-sm">
                   <span className="text-neutral-500 font-medium">WhatsApp:</span>
                   <a
-                    href={`https://wa.me/${founder.whatsapp}?text=Hello%20${encodeURIComponent(founder.name)}%2C%20I%20want%20to%20discuss%20a%20corporate%20MICE%20management%20requirement.`}
+                    href={`https://wa.me/${founder.whatsapp}?text=Hello%20${encodeURIComponent(founder.name)}%2C%20I%20would%20like%20to%20enquire%20about%20Odisha%20travel%20packages%2C%20Eco%20Retreat%20booking%2C%20or%20corporate%20MICE%20services.`}
                     target="_blank"
                     rel="noreferrer"
                     className="font-bold text-black hover:underline active:opacity-75 transition-colors flex items-center gap-1.5 py-1"

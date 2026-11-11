@@ -92,27 +92,27 @@ export default function WhoWeAre({ onOpenInquiry }) {
               {/* Kicker Pill */}
               <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#ede4d7] text-neutral-800 text-[11px] font-extrabold uppercase tracking-widest rounded-full border border-[#ded1bf]">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#b89358]" />
-                <span>ABOUT US</span>
+                <span>ODISHA TRAVEL AGENCY • SINCE 2020</span>
               </div>
 
-              {/* Big Serif Heading: Your trusted travel partner */}
+              {/* Big Serif Heading */}
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-neutral-900 tracking-tight leading-[1.1]">
-                Your trusted <span className="italic text-[#c8923a]">travel</span><br />
-                <span className="italic text-[#c8923a]">partner</span>
+                Your trusted Odisha <span className="italic text-[#c8923a]">travel</span><br />
+                agency <span className="italic text-[#c8923a]">&amp; MICE partner</span>
               </h2>
 
               {/* Italic Script Sub-heading */}
               <p className="font-serif italic text-xl sm:text-2xl text-neutral-600 font-light">
-                Holiday packages &amp; MICE from Bhubaneswar since 2020
+                Custom travel, Eco Retreat Odisha &amp; corporate MICE agency from Bhubaneswar
               </p>
 
               {/* Paragraphs */}
               <div className="space-y-3 text-neutral-600 text-sm sm:text-base leading-relaxed font-normal">
                 <p>
-                  Since 2020 we have helped 15,000+ travellers with honeymoons, family holidays, pilgrimage tours and custom corporate MICE trips across Odisha and India.
+                  Since 2020 we have served 18,000+ travellers as a premier Odisha travel agency — curating honeymoons, family travel packages, Puri pilgrimage tours, official Eco Retreat by Odisha Tourism glamping stays, and global vacations.
                 </p>
                 <p>
-                  From Kashmir and Goa to Europe and Dubai, our planners in Bhubaneswar plan hotels, transfers and sightseeing around your dates and budget. Group and corporate travel sits on the same desk — Odisha ground handling is written for other agencies.
+                  From Puri, Konark, Chilika, and Daringbadi to Kashmir, Goa, Bali, Dubai, and Europe, our Bhubaneswar planners customize hotels, flights, and transfers around your dates — alongside our specialized corporate MICE agency wing for conferences and incentive travel.
                 </p>
               </div>
 

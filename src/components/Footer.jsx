@@ -26,13 +26,13 @@ export default function Footer() {
                   Waves &amp; Breeze
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-[#fff033] font-bold">
-                  Odisha Travel DMC • Tours • MICE
+                  Odisha Travel Agency • Eco Retreat • MICE Agency
                 </span>
               </div>
             </div>
 
             <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Odisha's premier Travel DMC &amp; MICE organization: Curated Odisha &amp; global Tour Packages, 5-star resort bookings, and end-to-end Corporate MICE Management for families, pilgrims, and enterprises.
+              Bhubaneswar's trusted Odisha Travel Agency &amp; specialist MICE Agency: Custom Odisha &amp; global travel packages, official Eco Retreat by Odisha Tourism glamping bookings, luxury resorts, and corporate MICE events.
             </p>
 
             <div className="space-y-2 text-xs text-neutral-400 pt-1">
@@ -133,7 +133,7 @@ export default function Footer() {
             &copy; {currentYear} Waves and Breeze Hospitality. All Rights Reserved.
           </p>
           <div className="font-extrabold uppercase tracking-widest text-neutral-400 text-[10px] sm:text-[11px]">
-            ODISHA TOURS • GLOBAL HOLIDAYS • RESORTS • CORPORATE MICE
+            ODISHA TRAVEL AGENCY • ECO RETREAT ODISHA • CORPORATE MICE AGENCY
           </div>
           <div className="flex items-center gap-3 text-neutral-500 text-[11px]">
             <span>Bhubaneswar, Odisha</span>

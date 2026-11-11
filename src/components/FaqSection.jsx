@@ -6,27 +6,27 @@ export default function FaqSection({ onOpenInquiry }) {
 
   const faqs = [
     {
-      q: 'What travel services does Waves and Breeze Hospitality offer from Bhubaneswar?',
-      a: 'Waves and Breeze Hospitality is a full-service Travel & Holiday DMC headquartered in Old Town, Bhubaneswar. We curate custom Odisha tour packages, Eco Retreat by Odisha Tourism glamping stays, Pan-India holidays (Kashmir, Goa, Rajasthan, Andaman), International holidays (Dubai, Singapore, Thailand, Bali, Europe), 5-star hotel bookings, and corporate MICE programs.'
+      q: 'What makes Waves and Breeze Hospitality a leading Odisha travel agency and MICE agency?',
+      a: 'Waves and Breeze Hospitality is a Bhubaneswar-based Odisha travel agency offering complete leisure travel, custom Odisha tour packages, Eco Retreat by Odisha Tourism glamping stays, Pan-India & International holidays, 5-star hotel bookings, and a dedicated corporate MICE agency wing for business offsites and conferences.'
     },
     {
-      q: 'Can I consult and book Eco Retreat by Odisha Tourism glamping stays through you?',
-      a: 'Yes. We provide complete consultation, seasonal tariff comparisons, cottage selection (Deluxe Swiss Cottage, Premium Swiss Cottage, Royal Luxury Swiss Cottage, and Presidential Suite), and full trip logistics across all 7 official Eco Retreat Odisha locations: Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur, and Putsil.'
+      q: 'Can I consult and book Eco Retreat by Odisha Tourism glamping stays through your travel agency?',
+      a: 'Yes. As an experienced Odisha travel agency, we provide full Eco Retreat consultation, seasonal tariff comparisons, Swiss cottage selection (Deluxe, Premium, Royal Luxury & Presidential Suites), and trip logistics across all 7 Eco Retreat Odisha locations: Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur, and Putsil.'
     },
     {
-      q: 'What Odisha tour packages and India/global holidays do you organize?',
-      a: 'In Odisha, we curate the Golden Triangle (Bhubaneswar, Puri VIP Jagannath Darshan & Konark), Chilika Lake dolphin safaris, Daringbadi pine hill retreats, Bhitarkanika mangroves, and Similipal wildlife tours. For outstation travelers from Odisha, we build end-to-end packages for Kashmir, Goa, Rajasthan, Andaman, Dubai, Singapore, Thailand, Bali, and Europe.'
+      q: 'What Odisha travel packages and India/global holidays do you organize?',
+      a: 'In Odisha, we curate the Golden Triangle (Bhubaneswar, Puri VIP Jagannath Darshan & Konark), Chilika Lake dolphin safaris, Daringbadi pine hill retreats, Bhitarkanika mangroves, and Similipal wildlife tours. For outstation travelers from Odisha, we build end-to-end travel packages for Kashmir, Goa, Rajasthan, Andaman, Dubai, Singapore, Thailand, Bali, and Europe.'
     },
     {
-      q: 'Do you also handle Corporate MICE management and company offsites?',
-      a: 'Yes. Alongside leisure and holiday travel, our specialized Corporate MICE wing organizes executive board meetings, dealer incentive tours, conferences, expos, and gala dinners across top 5-star hotels (Mayfair Lagoon, Mayfair Waves Puri, Welcomhotel by ITC, Vivanta, Swosti Premium) and Eco Retreat group buyouts.'
+      q: 'Do you operate as a MICE agency for corporate events and company offsites?',
+      a: 'Yes. Alongside leisure travel, our specialized MICE agency division plans executive board meetings, dealer incentive tours, conferences, expos, and gala dinners across top 5-star hotels (Mayfair Lagoon, Mayfair Waves Puri, Welcomhotel by ITC, Vivanta, Swosti Premium) and Eco Retreat group buyouts.'
     },
     {
       q: 'Do you organize international holidays and overseas corporate incentive trips?',
       a: 'Yes. We organize turnkey international family holidays, honeymoons, and corporate incentive delegations across Dubai, Singapore, Thailand, Bali, and Europe — complete with luxury hotel stays, guided sightseeing, and visa guidance.'
     },
     {
-      q: 'Why plan your trip or corporate retreat directly with Waves & Breeze Hospitality?',
+      q: 'Why plan your travel, Eco Retreat stay, or corporate event with Waves & Breeze Hospitality?',
       a: 'Founder Biswaranjan Behera (+91 9040577429) personally oversees every itinerary from consultation through arrival. With direct hotel & Eco Retreat partnerships across Odisha since 2020, you receive transparent recommendations, confirmed stays, and responsive WhatsApp support.'
     }
   ];

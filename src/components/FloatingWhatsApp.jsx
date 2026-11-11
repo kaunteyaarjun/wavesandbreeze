@@ -39,13 +39,13 @@ export default function FloatingWhatsApp() {
           </div>
 
           <p className="text-xs text-neutral-500 my-3 leading-relaxed font-normal">
-            Need urgent venue procurement, MICE management, or a custom proposal? Chat directly on WhatsApp:
+            Planning Odisha travel, an Eco Retreat stay, holiday packages, or corporate MICE events? Chat directly on WhatsApp:
           </p>
 
           <div className="space-y-2.5">
             {/* Biswaranjan */}
             <a
-              href={`https://wa.me/${teamData.founders[0].whatsapp}?text=Hello%20Biswaranjan%20Behera%2C%20I%20want%20to%20plan%20a%20corporate%20MICE%20management%20solution.`}
+              href={`https://wa.me/${teamData.founders[0].whatsapp}?text=Hello%20Biswaranjan%20Behera%2C%20I%20would%20like%20help%20planning%20Odisha%20travel%2C%20Eco%20Retreat%20Odisha%2C%20or%20corporate%20MICE%20services.`}
               target="_blank"
               rel="noreferrer"
               className="p-3 rounded-xl bg-neutral-50 hover:bg-[#25D366]/10 active:bg-[#25D366]/20 border border-neutral-200 flex items-center justify-between group transition-colors"

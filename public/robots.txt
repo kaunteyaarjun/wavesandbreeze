@@ -1,7 +1,16 @@
 User-agent: *
 Allow: /
 
-# Explicit AI and Answer Engine Crawlers
+# Major Search Engines & AI Answer Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
@@ -25,4 +34,5 @@ Allow: /
 
 # Sitemaps & Machine-Readable Context for LLMs
 Sitemap: https://wavesandbreeze.in/sitemap.xml
-# LLMs Context File: https://wavesandbreeze.in/llms.txt
+# LLMs Context: https://wavesandbreeze.in/llms.txt
+# Extended LLMs Reference: https://wavesandbreeze.in/llms-full.txt

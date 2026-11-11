@@ -56,3 +56,49 @@
 .scroll-touch {
   -webkit-overflow-scrolling: touch;
 }
+
+/* Spinning Travel Globe SVG Keyframes */
+.sg-land {
+  animation: sg-spin 11s linear infinite;
+}
+
+.sg-vehicle {
+  transform-box: view-box;
+  transform-origin: center center;
+  animation: sg-orbit 15s linear infinite;
+}
+
+.sg-boat {
+  animation-duration: 28s;
+}
+
+.sg-plane-2 {
+  animation-delay: -7.5s;
+}
+
+.sg-plane-3 {
+  animation-delay: -1.5s;
+  animation-duration: 12s;
+}
+
+.sg-bike {
+  animation-duration: 24s;
+}
+
+@keyframes sg-spin {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes sg-orbit {
+  from {
+    transform: rotate(0deg) translateX(-160px);
+  }
+  to {
+    transform: rotate(360deg) translateX(-160px);
+  }
+}

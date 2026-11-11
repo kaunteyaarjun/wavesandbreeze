@@ -8,20 +8,44 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://wavesandbreeze.in/logo.png</image:loc>
-      <image:title>Waves and Breeze Hospitality — Odisha Travel DMC, Eco Retreat &amp; Holiday Planner</image:title>
-      <image:caption>Bhubaneswar Travel DMC for Odisha Tours, Eco Retreat Odisha, Global Holidays &amp; MICE</image:caption>
+      <image:title>Waves and Breeze Hospitality — Odisha Travel Agency, Eco Retreat &amp; MICE Agency</image:title>
+      <image:caption>Bhubaneswar Odisha Travel Agency &amp; MICE Agency for Odisha Tours, Eco Retreat Odisha &amp; Global Travel</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://wavesandbreeze.in/eco-retreat-odisha.png</image:loc>
-      <image:title>Eco Retreat by Odisha Tourism Luxury Glamping Partner Logo</image:title>
+      <image:title>Eco Retreat by Odisha Tourism Glamping Partner Logo</image:title>
     </image:image>
     <image:image>
       <image:loc>https://wavesandbreeze.in/destinations/eco_retreat_konark.jpg</image:loc>
-      <image:title>Eco Retreat Konark Ramchandi Beach Swiss Glamping Tents</image:title>
+      <image:title>Eco Retreat Konark Ramchandi Beach Swiss Glamping Tents Odisha</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/eco_retreat_satkosia.jpg</image:loc>
+      <image:title>Eco Retreat Satkosia Mahanadi Gorge Riverside Glamping Odisha</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/eco_retreat_bhitarkanika.jpg</image:loc>
+      <image:title>Eco Retreat Bhitarkanika Mangrove Beach Glamping Odisha</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/eco_retreat_daringbadi.jpg</image:loc>
+      <image:title>Eco Retreat Daringbadi Hill Station Pine Forest Glamping Odisha</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/eco_retreat_hirakud.jpg</image:loc>
+      <image:title>Eco Retreat Hirakud Dam Reservoir Glamping Odisha</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/eco_retreat_sonapur.jpg</image:loc>
+      <image:title>Eco Retreat Sonapur Coastal Beachfront Glamping Odisha</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wavesandbreeze.in/destinations/eco_retreat_putsil.jpg</image:loc>
+      <image:title>Eco Retreat Putsil Koraput Eastern Ghats Glamping Odisha</image:title>
     </image:image>
     <image:image>
       <image:loc>https://wavesandbreeze.in/destinations/jagannath.jpg</image:loc>
-      <image:title>Puri Shree Jagannath Temple &amp; Golden Triangle Tour Packages</image:title>
+      <image:title>Puri Shree Jagannath Temple &amp; Golden Triangle Tour Packages — Odisha Travel Agency</image:title>
     </image:image>
     <image:image>
       <image:loc>https://wavesandbreeze.in/destinations/konark_hd.jpg</image:loc>
@@ -37,63 +61,27 @@
     </image:image>
     <image:image>
       <image:loc>https://wavesandbreeze.in/destinations/kashmir_meadow.jpg</image:loc>
-      <image:title>Kashmir Holiday Packages from Bhubaneswar</image:title>
+      <image:title>Kashmir Holiday Packages from Bhubaneswar Travel Agency</image:title>
     </image:image>
     <image:image>
       <image:loc>https://wavesandbreeze.in/destinations/dubai_hd.jpg</image:loc>
-      <image:title>Dubai Holidays &amp; Corporate Incentive Travel</image:title>
+      <image:title>Dubai Holidays &amp; Corporate MICE Agency Incentive Travel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://wavesandbreeze.in/destinations/europe.jpg</image:loc>
-      <image:title>Europe International Holiday Packages from Odisha</image:title>
+      <image:title>Europe International Holiday Packages from Odisha Travel Agency</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://wavesandbreeze.in/#packages</loc>
+    <loc>https://wavesandbreeze.in/llms.txt</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wavesandbreeze.in/#eco-retreat</loc>
+    <loc>https://wavesandbreeze.in/llms-full.txt</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://wavesandbreeze.in/#about</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://wavesandbreeze.in/#services</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://wavesandbreeze.in/#destinations</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://wavesandbreeze.in/#process</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://wavesandbreeze.in/#founders</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://wavesandbreeze.in/#faqs</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

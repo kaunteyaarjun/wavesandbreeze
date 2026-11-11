@@ -44,6 +44,17 @@ export default function ProcessSection() {
               Effortless<br />
               Travel.
             </h2>
+
+            {/* Animated Tour Bus Element (Adapted from travel.zip by Chandan Choudhary, MIT License) */}
+            <div className="mt-8 sm:mt-10 flex flex-col items-start pointer-events-none select-none" aria-hidden="true">
+              <img
+                src="/images/travel-bus.webp"
+                alt=""
+                className="w-36 sm:w-44 lg:w-48 h-auto drop-shadow-[0_10px_14px_rgba(0,0,0,0.16)]"
+              />
+              <div className="w-40 sm:w-48 lg:w-52 h-2.5 -mt-1.5 bg-black/20 blur-[3px] rounded-full ml-1" />
+              <div className="w-48 sm:w-56 border-t-2 border-dashed border-black/30 mt-1" />
+            </div>
           </div>
 
           {/* Right Column: 4 Numbered Steps with Black Lines */}

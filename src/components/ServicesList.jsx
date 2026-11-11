@@ -6,23 +6,23 @@ export default function ServicesList({ onOpenInquiry }) {
   const services = [
     {
       num: '01',
-      title: 'Curated Odisha Tour Packages & Heritage Holidays',
-      desc: 'Handcrafted leisure itineraries across Puri, Konark, Chilika Lake, Daringbadi, and Bhitarkanika. Includes VIP Jagannath temple darshan, luxury beachside stays, guided sightseeing, and authentic Odia dining.',
+      title: 'Odisha Travel Agency & Curated Holiday Packages',
+      desc: 'Handcrafted Odisha travel itineraries across Puri, Konark, Chilika Lake, Daringbadi, and Bhitarkanika — including VIP Jagannath temple darshan, beachfront resorts, guided sightseeing, and private transfers.',
     },
     {
       num: '02',
-      title: 'Corporate MICE Management & Executive Offsites',
-      desc: 'Turnkey corporate event management across Odisha and Dubai: executive board meetings, CXO summits, annual sales kick-offs, dealer incentive tours, award gala nights, and technical 4K LED audio-visual production.',
+      title: 'Corporate MICE Agency — Events, Offsites & Conferences',
+      desc: 'Full-service corporate MICE agency across Odisha and Dubai: executive board meetings, CXO summits, annual sales kick-offs, dealer incentive travel, award gala nights, and technical 4K LED production.',
     },
     {
       num: '03',
-      title: 'Pan-India & International Holiday Packages',
-      desc: 'Bespoke leisure, honeymoon, and family holiday packages across Kashmir, Goa, Rajasthan, Andaman, Dubai, Singapore, Thailand, Bali, and Europe — planned end-to-end with flights, stays, and curated sightseeing.',
+      title: 'Pan-India & International Travel Packages',
+      desc: 'Bespoke leisure travel, honeymoon suites, and family holiday packages across Kashmir, Goa, Rajasthan, Andaman, Dubai, Singapore, Thailand, Bali, and Europe — planned end-to-end from Bhubaneswar.',
     },
     {
       num: '04',
       title: 'Eco Retreat by Odisha Tourism & 5-Star Stays',
-      desc: 'Official luxury glamping consultation & reservations across all 7 Eco Retreat Odisha sites (Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur & Putsil) plus Mayfair, Welcomhotel ITC, Vivanta & Sterling tariffs.',
+      desc: 'Dedicated Eco Retreat consultation & cottage bookings across all 7 Eco Retreat Odisha locations (Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur & Putsil) plus Mayfair, Welcomhotel ITC, Vivanta & Sterling stays.',
       modalService: 'Eco Retreat by Odisha Tourism (Glamping)',
       badgeLogo: '/eco-retreat-odisha.png',
     },
@@ -37,20 +37,20 @@ export default function ServicesList({ onOpenInquiry }) {
           <div className="flex items-center gap-2 mb-4 sm:mb-6">
             <span className="w-2.5 h-2.5 rounded-full bg-[#fff033] shrink-0"></span>
             <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#fff033]">
-              TRAVEL DMC &amp; MICE SERVICES
+              ODISHA TRAVEL AGENCY • ECO RETREAT • MICE AGENCY
             </span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14 items-end mb-10 sm:mb-16 pb-8 sm:pb-10 border-b border-neutral-800">
             <div className="lg:col-span-8">
               <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.1] sm:leading-[1.08]">
-                Complete Odisha Travel<br />
-                &amp; MICE Capabilities
+                Odisha Travel Agency,<br />
+                Eco Retreat &amp; MICE Agency
               </h2>
             </div>
             <div className="lg:col-span-4">
               <p className="text-neutral-400 text-sm sm:text-base leading-relaxed font-normal">
-                Whether you need a bespoke family holiday across Puri and Chilika, a pan-India/global escape, or a 1,500-delegate corporate convention, we deliver seamless hospitality backed by native Odisha mastery.
+                Whether you want custom family travel across Puri and Chilika, an Eco Retreat by Odisha Tourism glamping getaway, an international vacation, or a 1,500-delegate MICE convention, we deliver seamless execution.
               </p>
             </div>
           </div>

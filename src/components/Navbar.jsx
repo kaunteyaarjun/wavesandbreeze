@@ -1,19 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, Search, Plane, ArrowRight, ChevronDown } from 'lucide-react';
+import { Phone, Mail, Menu, X, Search, Plane, ArrowRight, ChevronDown } from 'lucide-react';
 import { teamData } from '../data/team';
-
-// Social SVG Icons
-const InstagramIcon = ({ className = "w-3 h-3" }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-  </svg>
-);
-
-const FacebookIcon = ({ className = "w-3 h-3" }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-  </svg>
-);
 
 const WhatsAppIcon = ({ className = "w-3.5 h-3.5" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
@@ -73,21 +60,14 @@ export default function Navbar({ onOpenInquiry }) {
             <span className="font-extrabold">+91 9040577429</span>
           </a>
 
-          {/* Center: Decorative Flying Birds Silhouette Motif */}
-          <div className="hidden md:flex items-center gap-6 opacity-60">
-            <span className="text-[14px]">🕊️</span>
-            <span className="text-[18px]">🕊️</span>
-            <span className="text-[12px]">🕊️</span>
-          </div>
-
-          {/* Right: Social Media Pills & Language Selector */}
+          {/* Right: Direct Contact Channels & Region */}
           <div className="flex items-center gap-2 sm:gap-3 text-xs">
             <div className="flex items-center gap-1.5 text-neutral-500">
-              <a href="#" className="w-6 h-6 rounded-full bg-[#f4ebe1] hover:bg-[#f5b324] hover:text-black flex items-center justify-center transition-colors" aria-label="Instagram">
-                <InstagramIcon className="w-3 h-3" />
+              <a href={`tel:${teamData.founders[0].phone}`} className="w-6 h-6 rounded-full bg-[#f4ebe1] hover:bg-[#f5b324] hover:text-black flex items-center justify-center transition-colors" aria-label="Call Desk">
+                <Phone className="w-3 h-3" />
               </a>
-              <a href="#" className="w-6 h-6 rounded-full bg-[#f4ebe1] hover:bg-[#f5b324] hover:text-black flex items-center justify-center transition-colors" aria-label="Facebook">
-                <FacebookIcon className="w-3 h-3" />
+              <a href="mailto:info@wavesandbreeze.in" className="w-6 h-6 rounded-full bg-[#f4ebe1] hover:bg-[#f5b324] hover:text-black flex items-center justify-center transition-colors" aria-label="Email Desk">
+                <Mail className="w-3 h-3" />
               </a>
               <a href={`https://wa.me/${teamData.founders[0].whatsapp}`} target="_blank" rel="noreferrer" className="w-6 h-6 rounded-full bg-[#f4ebe1] hover:bg-[#25D366] hover:text-white flex items-center justify-center transition-colors" aria-label="WhatsApp">
                 <WhatsAppIcon className="w-3 h-3" />
@@ -112,10 +92,19 @@ export default function Navbar({ onOpenInquiry }) {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           
           {/* Logo Brand on Left */}
-          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group select-none">
+          <a
+            href="#top"
+            onClick={(e) => {
+              e.preventDefault();
+              setActiveMegaMenu(null);
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center gap-2.5 sm:gap-3 group select-none"
+          >
             <img 
               src="/logo.png" 
-              alt="Waves & Breeze Hospitality" 
+              alt="Waves & Breeze Hospitality - Odisha Travel Agency & MICE Agency" 
               className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
               onError={(e) => { e.target.onerror = null; e.target.src = '/logo.jpg'; }}
             />
@@ -123,17 +112,22 @@ export default function Navbar({ onOpenInquiry }) {
               <span className="font-display font-extrabold text-base sm:text-lg tracking-tight text-neutral-900 leading-tight">
                 Waves &amp; Breeze
               </span>
-              <span className="text-[9px] font-extrabold tracking-widest uppercase text-[#d97706]">
-                TRAVEL DMC • TOURS • MICE
+              <span className="text-[9px] font-extrabold tracking-widest uppercase text-[#d97706] lg:whitespace-nowrap">
+                ODISHA TRAVEL • ECO RETREAT • MICE
               </span>
             </div>
           </a>
 
           {/* Center Navigation Links with Dropdown Triggers */}
-          <nav className="hidden lg:flex items-center gap-1 text-[13px] xl:text-[14px] font-bold text-neutral-700">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 text-[12.5px] xl:text-[14px] font-bold text-neutral-700 whitespace-nowrap">
             <a 
-              href="#" 
-              className="px-3.5 py-1.5 rounded-full bg-neutral-900 text-white font-extrabold transition-colors shadow-sm"
+              href="#top"
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveMegaMenu(null);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="px-3 xl:px-3.5 py-1.5 rounded-full bg-neutral-900 text-white font-extrabold transition-colors shadow-sm"
             >
               Home
             </a>
@@ -143,7 +137,12 @@ export default function Navbar({ onOpenInquiry }) {
               className="relative"
               onMouseEnter={() => setActiveMegaMenu('odisha')}
             >
-              <button className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold">
+              <button
+                type="button"
+                aria-expanded={activeMegaMenu === 'odisha'}
+                onClick={() => setActiveMegaMenu((prev) => (prev === 'odisha' ? null : 'odisha'))}
+                className="px-2.5 xl:px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold"
+              >
                 <span>Odisha</span>
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </button>
@@ -154,7 +153,12 @@ export default function Navbar({ onOpenInquiry }) {
               className="relative"
               onMouseEnter={() => setActiveMegaMenu('india')}
             >
-              <button className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold">
+              <button
+                type="button"
+                aria-expanded={activeMegaMenu === 'india'}
+                onClick={() => setActiveMegaMenu((prev) => (prev === 'india' ? null : 'india'))}
+                className="px-2.5 xl:px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold"
+              >
                 <span>India</span>
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </button>
@@ -165,35 +169,40 @@ export default function Navbar({ onOpenInquiry }) {
               className="relative"
               onMouseEnter={() => setActiveMegaMenu('international')}
             >
-              <button className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold">
+              <button
+                type="button"
+                aria-expanded={activeMegaMenu === 'international'}
+                onClick={() => setActiveMegaMenu((prev) => (prev === 'international' ? null : 'international'))}
+                className="px-2.5 xl:px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors flex items-center gap-1 font-bold"
+              >
                 <span>International</span>
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </button>
             </div>
 
             {/* Destinations */}
-            <a href="#destinations" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
+            <a href="#destinations" className="px-2.5 xl:px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
               Destinations
             </a>
 
             {/* Corporate MICE */}
-            <a href="#services" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
+            <a href="#services" className="px-2.5 xl:px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
               Corporate MICE
             </a>
 
             {/* About Us */}
-            <a href="#about" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
+            <a href="#about" className="px-2.5 xl:px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
               About Us
             </a>
 
             {/* Contact / FAQs */}
-            <a href="#faqs" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
+            <a href="#faqs" className="px-2.5 xl:px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
               FAQs
             </a>
           </nav>
 
           {/* Right Action: Search Icon + Golden BOOK NOW Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 shrink-0 whitespace-nowrap">
             <button
               onClick={() => onOpenInquiry()}
               className="w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 flex items-center justify-center transition-colors"
@@ -205,10 +214,10 @@ export default function Navbar({ onOpenInquiry }) {
             {/* Golden Gradient BOOK NOW Button (Exact Reference Match) */}
             <button
               onClick={() => onOpenInquiry()}
-              className="group flex items-center gap-2.5 bg-gradient-to-r from-[#e5a93c] via-[#f5b324] to-[#e5a93c] hover:brightness-110 text-black font-extrabold text-xs sm:text-sm pl-4 pr-1.5 py-1.5 rounded-full shadow-md active:scale-95 transition-all"
+              className="group flex items-center gap-2 xl:gap-2.5 bg-gradient-to-r from-[#e5a93c] via-[#f5b324] to-[#e5a93c] hover:brightness-110 text-black font-extrabold text-xs sm:text-sm pl-3.5 xl:pl-4 pr-1.5 py-1.5 rounded-full shadow-md active:scale-95 transition-all whitespace-nowrap"
             >
-              <Plane className="w-3.5 h-3.5 -rotate-45" />
-              <span className="uppercase tracking-wider font-extrabold text-[12px]">BOOK NOW</span>
+              <Plane className="w-3.5 h-3.5 -rotate-45 shrink-0" />
+              <span className="uppercase tracking-wider font-extrabold text-[11.5px] xl:text-[12px]">BOOK NOW</span>
               <span className="w-7 h-7 rounded-full bg-black text-[#f5b324] flex items-center justify-center font-bold transition-transform group-hover:translate-x-0.5">
                 ➔
               </span>
@@ -266,7 +275,8 @@ export default function Navbar({ onOpenInquiry }) {
                     Kashmir to Kerala, planned from here.
                   </p>
                   <a 
-                    href="#packages" 
+                    href="#packages"
+                    onClick={() => setActiveMegaMenu(null)}
                     className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-black bg-[#f5b324] px-3 py-1.5 rounded-full hover:bg-white transition-colors"
                   >
                     <span>VIEW TOURS</span>
@@ -377,7 +387,7 @@ export default function Navbar({ onOpenInquiry }) {
 
                 {/* Bottom Bar inside mega menu */}
                 <div className="pt-3 border-t border-[#ebdccf] flex items-center justify-between text-xs text-neutral-600">
-                  <a href="#packages" className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
+                  <a href="#packages" onClick={() => setActiveMegaMenu(null)} className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
                     <span>View all India tour packages</span>
                     <ArrowRight className="w-3 h-3" />
                   </a>
@@ -418,7 +428,8 @@ export default function Navbar({ onOpenInquiry }) {
                     Dubai, Europe, Asia and more.
                   </p>
                   <a 
-                    href="#packages" 
+                    href="#packages"
+                    onClick={() => setActiveMegaMenu(null)}
                     className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-black bg-[#f5b324] px-3 py-1.5 rounded-full hover:bg-white transition-colors"
                   >
                     <span>VIEW TOURS</span>
@@ -529,7 +540,7 @@ export default function Navbar({ onOpenInquiry }) {
 
                 {/* Bottom Bar inside mega menu */}
                 <div className="pt-3 border-t border-[#ebdccf] flex items-center justify-between text-xs text-neutral-600">
-                  <a href="#packages" className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
+                  <a href="#packages" onClick={() => setActiveMegaMenu(null)} className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
                     <span>View all International packages</span>
                     <ArrowRight className="w-3 h-3" />
                   </a>
@@ -707,8 +718,12 @@ export default function Navbar({ onOpenInquiry }) {
         <div className="lg:hidden fixed inset-x-0 top-[88px] bottom-0 bg-white z-50 flex flex-col justify-between p-6 overflow-y-auto border-t border-neutral-200">
           <div className="space-y-3 pt-2">
             <a 
-              href="#" 
-              onClick={() => setMobileMenuOpen(false)} 
+              href="#top"
+              onClick={(e) => {
+                e.preventDefault();
+                setMobileMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
               className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
             >
               Home
