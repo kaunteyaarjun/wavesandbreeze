@@ -4,26 +4,26 @@ export default function OnePartnerBanner() {
   const cards = [
     {
       num: '01',
-      title: 'End-to-End MICE Management',
-      desc: 'One coordinated team for planning, hotel blocks, travel, hospitality, AV production, logistics, and event execution.',
+      title: 'Bespoke Holiday Curation',
+      desc: 'Handcrafted Odisha, Kashmir, Goa, Bali, Dubai & Europe itineraries with hotels, sightseeing & flights arranged end to end.',
       isYellow: false
     },
     {
       num: '02',
-      title: 'Odisha & Pan-India Execution',
-      desc: 'MICE management services across Bhubaneswar, Puri, Konark, Chilika, and leading corporate hubs nationwide.',
+      title: 'Eco Retreat by Odisha Tourism',
+      desc: 'Stay consultation and seasonal glamping bookings across Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur & Putsil.',
       isYellow: false
     },
     {
       num: '03',
-      title: 'International MICE Capability',
-      desc: 'Support for overseas meetings, incentive travel programs, conferences, and destination management in Dubai and beyond.',
+      title: 'Confirmed 5-Star Resort Stays',
+      desc: 'Direct partner tariffs with Mayfair Hotels, Sterling Puri, Welcomhotel by ITC, Vivanta, and curated boutique luxury properties.',
       isYellow: false
     },
     {
       num: '04',
-      title: 'Corporate-Focused Operations',
-      desc: 'Professional communication, detailed planning, and disciplined execution tailored for enterprise and leadership teams.',
+      title: 'Dedicated MICE & Corporate Wing',
+      desc: 'As part of our travel desk, we also execute executive offsites, dealer incentive trips, conferences, and corporate gala events.',
       isYellow: true // The signature Yellow box!
     }
   ];
@@ -36,20 +36,20 @@ export default function OnePartnerBanner() {
         <div className="flex items-center gap-2 mb-4 sm:mb-6">
           <span className="w-2.5 h-2.5 rounded-full bg-[#fff033]"></span>
           <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#fff033]">
-            WHY WAVES &amp; BREEZE MICE MANAGEMENT
+            WHY WAVES &amp; BREEZE HOSPITALITY
           </span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14 items-end mb-10 sm:mb-16 pb-8 sm:pb-12 border-b border-neutral-800">
           <div className="lg:col-span-8">
             <h2 className="font-display text-3xl sm:text-5xl lg:text-7xl font-medium tracking-tight text-white leading-[1.08] sm:leading-[1.05]">
-              One MICE Partner.<br />
-              Every Moving Part.
+              One Travel Partner.<br />
+              Every Journey Covered.
             </h2>
           </div>
           <div className="lg:col-span-4">
             <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">
-              We combine structured corporate event management with strong on-ground operations to make complex MICE programs easier to plan, manage, and execute.
+              From family holidays, honeymoons, and Eco Retreat Odisha glamping to international escapes and corporate MICE programs, we manage every detail with transparent local expertise.
             </p>
           </div>
         </div>

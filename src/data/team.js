@@ -1,6 +1,6 @@
 export const teamData = {
   company: 'Waves and Breeze Hospitality',
-  tagline: 'Premier MICE & Corporate Event Specialists',
+  tagline: 'Complete Travel DMC, Eco Retreat Glamping & Corporate MICE',
   officeAddress: 'Near Hanuman Temple Lane, Old Town, Bhubaneswar, Odisha - 751002',
   email: 'info@wavesandbreeze.in',
   founders: [
@@ -11,14 +11,14 @@ export const teamData = {
       phone: '9040577429',
       phoneFormatted: '+91 90405 77429',
       whatsapp: '919040577429',
-      bio: 'Hospitality entrepreneur leading high-level corporate MICE strategy, government delegations, 5-star venue contracting, and destination management across Odisha and premier global circuits.',
-      focus: 'Corporate Partnerships, Mega Conventions & Strategic Venue Procurement'
+      bio: 'Bhubaneswar-based travel & hospitality entrepreneur curating family holidays, Eco Retreat by Odisha Tourism glamping stays, 5-star resort bookings, global escapes, and corporate MICE programs from planning to on-ground delivery.',
+      focus: 'Bespoke Holiday Planning, Eco Retreat Stays, Hotel Alliances & Corporate MICE'
     }
   ],
   stats: [
-    { number: '350+', label: 'MICE Events Executed', sub: 'Conferences & Summits' },
-    { number: '45,000+', label: 'Delegates Managed', sub: 'Across Odisha & Worldwide' },
-    { number: '60+', label: 'Partner Luxury Venues', sub: '5-Star Hotels & Eco-Resorts' },
-    { number: '100%', label: 'On-Time Delivery', sub: 'Statutory & Venue Compliance' }
+    { number: '18,000+', label: 'Happy Travellers', sub: 'Family, Group & Corporate Trips' },
+    { number: '7 Camps', label: 'Eco Retreat Odisha', sub: 'Luxury Swiss Glamping Stays' },
+    { number: '60+', label: 'Partner Resorts & Hotels', sub: 'Mayfair, ITC, Sterling & Eco-Stays' },
+    { number: '350+', label: 'MICE Programs Delivered', sub: 'Offsites, Summits & Galas' }
   ]
 };

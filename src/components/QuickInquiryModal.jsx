@@ -16,6 +16,7 @@ const WhatsAppIcon = ({ className = "w-5 h-5 text-white" }) => (
 
 const PRESET_SERVICES = [
   'Odisha Tour & Holiday Package',
+  'Eco Retreat by Odisha Tourism (Glamping)',
   'India Domestic Tour Package',
   'International Holiday Package',
   'Corporate MICE / Offsite / Conference',
@@ -24,6 +25,14 @@ const PRESET_SERVICES = [
 ];
 
 const PRESET_DESTINATIONS = [
+  { value: 'Eco Retreat by Odisha Tourism (All 7 Sites)', label: 'Eco Retreat by Odisha Tourism (All 7 Camps)' },
+  { value: 'Eco Retreat Konark', label: 'Eco Retreat Konark (Ramchandi Beach)' },
+  { value: 'Eco Retreat Satkosia', label: 'Eco Retreat Satkosia (Mahanadi Gorge)' },
+  { value: 'Eco Retreat Bhitarkanika', label: 'Eco Retreat Bhitarkanika (Pentha Beach)' },
+  { value: 'Eco Retreat Daringbadi', label: 'Eco Retreat Daringbadi (3,000 ft Hill Station)' },
+  { value: 'Eco Retreat Hirakud', label: 'Eco Retreat Hirakud (Dam Reservoir)' },
+  { value: 'Eco Retreat Sonapur', label: 'Eco Retreat Sonapur (Virgin Blue Beach)' },
+  { value: 'Eco Retreat Putsil', label: 'Eco Retreat Putsil (Koraput Eastern Ghats)' },
   { value: 'Kashmir', label: 'Kashmir (Srinagar, Gulmarg & Pahalgam)' },
   { value: 'Goa', label: 'Goa Beaches & Coastal Holidays' },
   { value: 'Europe', label: 'Europe (Paris, Swiss Alps, Rome)' },
@@ -128,7 +137,7 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none bg-[#fff033] text-black text-[11px] font-extrabold uppercase tracking-wider mb-1.5">
                 <Sparkles className="w-3 h-3 text-black" />
-                Odisha Tours • Global Holidays • Corporate MICE
+                Odisha Tours • Eco Retreat • Global Holidays • MICE
               </div>
               <h3 className="font-display text-2xl font-bold text-neutral-900">
                 Plan Your Journey &amp; Event

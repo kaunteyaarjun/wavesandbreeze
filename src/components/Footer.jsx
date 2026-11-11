@@ -94,7 +94,7 @@ export default function Footer() {
                 <a href="#services" className="hover:text-white transition-colors block py-1">Corporate MICE &amp; Offsites</a>
               </li>
               <li>
-                <a href="#destinations" className="hover:text-white transition-colors block py-1">Eco-Retreat &amp; Hotel Bookings</a>
+                <a href="#eco-retreat" className="hover:text-white transition-colors block py-1">Eco Retreat by Odisha Tourism</a>
               </li>
             </ul>
           </div>
@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={`https://wa.me/${teamData.founders[0].whatsapp}?text=Hello%20Waves%20and%20Breeze%20Hospitality%2C%20I%20want%20to%20plan%20a%20corporate%20MICE%20management%20solution.`}
+                  href={`https://wa.me/${teamData.founders[0].whatsapp}?text=Hello%20Waves%20and%20Breeze%20Hospitality%2C%20I%20would%20like%20to%20plan%20a%20trip%20or%20Eco%20Retreat%20Odisha%20stay.`}
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-[#fff033] transition-colors flex items-center gap-1.5 text-[#fff033] font-semibold py-1"

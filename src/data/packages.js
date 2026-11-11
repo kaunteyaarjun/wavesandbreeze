@@ -214,5 +214,29 @@ export const tourPackagesData = [
       'Complete visa assistance & flight routing guidance'
     ],
     description: 'Lush volcanic lakes, iconic water temples, and private pool villas across Ubud and Nusa Penida crafted seamlessly for couples and executive groups.'
+  },
+  {
+    id: 'eco-retreat-odisha-glamping',
+    title: 'Eco Retreat by Odisha Tourism — Konark, Satkosia & Daringbadi Glamping',
+    duration: '3 Days / 2 Nights',
+    category: 'Eco Retreat Odisha',
+    badge: 'Official Glamping',
+    destination: 'Eco Retreat Konark',
+    image: '/destinations/eco_retreat_konark.jpg',
+    idealFor: 'Couples, Families, Corporate Retreats & Glamping Seekers',
+    route: 'Bhubaneswar → Konark Ramchandi Beach / Satkosia / Bhitarkanika / Daringbadi / Putsil',
+    highlights: [
+      'Deluxe, Premium, Royal Luxury Swiss Cottages & Presidential Suites',
+      'Choose from 7 official camps: Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur & Putsil',
+      'All-inclusive gourmet meals, water sports, river cruises & cultural evenings',
+      'End-to-end consultation on seasonal availability, tent tiers & sightseeing transfers'
+    ],
+    inclusions: [
+      '2 Nights Luxury Swiss Cottage Glamping Stay',
+      'All Buffet Breakfast, Lunch & Dinner Included',
+      'In-Camp Water Sports, Nature Walks & Cultural Performances',
+      'Bhubaneswar Airport / Railway Station Arrival & Departure Support'
+    ],
+    description: 'Experience Odisha Tourism’s acclaimed luxury glamping festival across Ramchandi Beach, Satkosia Gorge, Pentha Mangroves, and Eastern Ghats peaks—consult us for live camp availability and complete trip curation.'
   }
 ];

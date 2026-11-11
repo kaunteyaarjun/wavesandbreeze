@@ -141,6 +141,21 @@ const popularPackages = [
     modalDestination: 'Daringbadi Hill Station',
     modalService: 'Odisha Tour & Holiday Package',
     targetAnchor: '#packages'
+  },
+  {
+    id: 'eco-retreat-odisha',
+    num: '09',
+    name: 'Eco Retreat',
+    subRegion: 'ODISHA TOURISM • 7 SITES',
+    categoryBadge: 'LUXURY GLAMPING ODISHA',
+    italicSubtitle: 'Swiss cottages across Ramchandi Beach, gorges & hill peaks',
+    description: 'Official Eco Retreat by Odisha Tourism luxury glamping bookings & travel consultation across Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur & Putsil.',
+    image: '/destinations/eco_retreat_konark.jpg',
+    locations: ['KONARK BEACH', 'SATKOSIA', 'DARINGBADI', 'PUTSIL'],
+    tourButtonText: 'CONSULT ECO RETREAT',
+    modalDestination: 'Eco Retreat Konark',
+    modalService: 'Eco Retreat by Odisha Tourism (Glamping)',
+    targetAnchor: '#eco-retreat'
   }
 ];
 

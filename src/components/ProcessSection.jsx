@@ -4,23 +4,23 @@ export default function ProcessSection() {
   const steps = [
     {
       num: '01',
-      title: 'Understand & Brief',
-      desc: 'We analyze your strategic objectives, delegate count, destination preference, budget parameters, and business KPIs.'
+      title: 'Consult & Discover',
+      desc: 'Share your travel dates, preferred destination or Eco Retreat camp, group size, accommodation style, and budget.'
     },
     {
       num: '02',
-      title: 'Design & Plan',
-      desc: 'We structure the complete event framework: direct 5-star venue procurement, hotel room allocations, AV staging blueprints, and itemized timelines.'
+      title: 'Design Your Itinerary',
+      desc: 'We craft a day-by-day itinerary with curated 5-star resort or Swiss cottage stays, flight routing, and transparent quotes.'
     },
     {
       num: '03',
-      title: 'Coordinate & Clear',
-      desc: 'We coordinate hotels, airlines, chartered group logistics, audio-visual rigging, statutory clearances, and delegate secretariats.'
+      title: 'Confirm & Coordinate',
+      desc: 'We lock hotel rooms, Eco Retreat cottages, temple darshan / safari permits, and MICE conference setups when needed.'
     },
     {
       num: '04',
-      title: 'Manage & Execute',
-      desc: 'Our founder and operational directors manage every detail on the ground, from airport arrivals and keynote staging to gala dinners.'
+      title: 'Travel With Peace of Mind',
+      desc: 'Our Bhubaneswar team stays a WhatsApp message away throughout your trip — from airport welcome to safe return home.'
     }
   ];
 
@@ -35,14 +35,14 @@ export default function ProcessSection() {
             <div className="flex items-center gap-2 mb-4 sm:mb-6">
               <span className="w-2.5 h-2.5 rounded-full bg-black"></span>
               <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-[0.16em] sm:tracking-[0.2em] text-black/80">
-                MICE MANAGEMENT PROCESS
+                HOW WE PLAN YOUR TRIP
               </span>
             </div>
 
             <h2 className="font-display text-3xl sm:text-5xl lg:text-[68px] font-medium tracking-tight text-black leading-[1.08] sm:leading-[1.05]">
               Clear Process.<br />
-              Seamless<br />
-              Management.
+              Effortless<br />
+              Travel.
             </h2>
           </div>
 

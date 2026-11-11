@@ -21,8 +21,10 @@ export default function ServicesList({ onOpenInquiry }) {
     },
     {
       num: '04',
-      title: 'Luxury Hotel Bookings & Eco-Retreat Reservations',
-      desc: 'Direct preferred corporate and holiday tariffs with leading hospitality brands: Mayfair Hotels & Resorts, Sterling Puri, Welcomhotel by ITC, Vivanta, Swosti, and luxury beachside Swiss glamping camps.',
+      title: 'Eco Retreat by Odisha Tourism & 5-Star Stays',
+      desc: 'Official luxury glamping consultation & reservations across all 7 Eco Retreat Odisha sites (Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur & Putsil) plus Mayfair, Welcomhotel ITC, Vivanta & Sterling tariffs.',
+      modalService: 'Eco Retreat by Odisha Tourism (Glamping)',
+      badgeLogo: '/eco-retreat-odisha.png',
     },
   ];
 
@@ -59,16 +61,26 @@ export default function ServicesList({ onOpenInquiry }) {
           {services.map((service, idx) => (
             <div
               key={idx}
-              onClick={() => onOpenInquiry({ service: service.title })}
+              onClick={() => onOpenInquiry({
+                service: service.modalService || service.title,
+                ...(service.badgeLogo ? { destination: 'Eco Retreat by Odisha Tourism (All 7 Sites)' } : {})
+              })}
               className="py-7 sm:py-12 group cursor-pointer active:bg-neutral-900 hover:bg-neutral-950 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6"
             >
               <div className="flex items-start md:items-center gap-4 sm:gap-10 md:w-5/12">
                 <span className="font-display font-black text-lg sm:text-xl text-[#fff033] shrink-0">
                   {service.num}
                 </span>
-                <h3 className="font-display text-xl sm:text-3xl font-medium text-white group-hover:text-[#fff033] transition-colors leading-snug">
-                  {service.title}
-                </h3>
+                <div>
+                  <h3 className="font-display text-xl sm:text-3xl font-medium text-white group-hover:text-[#fff033] transition-colors leading-snug">
+                    {service.title}
+                  </h3>
+                  {service.badgeLogo && (
+                    <div className="mt-2.5 inline-flex items-center gap-2 bg-white rounded-lg px-2.5 py-1">
+                      <img src={service.badgeLogo} alt="Eco Retreat Odisha" className="h-6 w-auto object-contain" />
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="md:w-5/12 text-neutral-400 text-xs sm:text-base leading-relaxed pl-8 md:pl-0 font-normal">

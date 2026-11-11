@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MiceStrip from './components/MiceStrip';
 import TourPackagesSection from './components/TourPackagesSection';
+import EcoRetreatSection from './components/EcoRetreatSection';
 import WhoWeAre from './components/WhoWeAre';
 import ServicesList from './components/ServicesList';
 import StrategyToExecution from './components/StrategyToExecution';
@@ -40,6 +41,9 @@ export default function App() {
 
         {/* 4. Curated Odisha, India & International Tour Packages */}
         <TourPackagesSection onOpenInquiry={handleOpenInquiry} />
+
+        {/* 4B. Official Eco Retreat by Odisha Tourism (All 7 Glamping Locations) */}
+        <EcoRetreatSection onOpenInquiry={handleOpenInquiry} />
 
         {/* 5. Who We Are: Trusted Odisha Travel DMC & Corporate MICE Partner */}
         <WhoWeAre onOpenInquiry={handleOpenInquiry} />

@@ -3,9 +3,9 @@ import React from 'react';
 export default function MiceStrip() {
   const items = [
     { letter: 'T', title: 'Odisha Tours & Holidays', sub: 'Puri, Konark, Chilika & Daringbadi' },
-    { letter: 'M', title: 'Corporate MICE Management', sub: 'Meetings, Summits & Galas' },
+    { letter: 'E', title: 'Eco Retreat Odisha', sub: 'Konark, Satkosia, Bhitarkanika & 4 More' },
     { letter: 'G', title: 'Global Holiday Packages', sub: 'Kashmir, Goa, Dubai, Bali & Europe' },
-    { letter: 'H', title: '5-Star Resort Stays', sub: 'Mayfair, Sterling & Eco-Retreats' },
+    { letter: 'M', title: 'Corporate MICE & Resorts', sub: 'Summits, Mayfair, ITC & Glamping' },
   ];
 
   return (

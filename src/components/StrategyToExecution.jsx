@@ -3,20 +3,20 @@ import React from 'react';
 export default function StrategyToExecution() {
   const pillars = [
     {
-      title: 'Planning & Sourcing',
-      desc: 'Concepts, budget blueprints, venue procurement, timelines, and master run-sheets.'
+      title: 'Itinerary & Stay Planning',
+      desc: 'Tailor-made day-by-day tour routes, Eco Retreat camp matching, hotel selection, and transparent pricing.'
     },
     {
-      title: 'Technical Production',
-      desc: 'Stage architecture, 3D LED screens, acoustic rigging, robotic lighting, and redundant power.'
+      title: 'Resort & Glamping Access',
+      desc: 'Confirmed inventory across Odisha 5-star resorts and Eco Retreat Swiss cottages from Konark to Putsil.'
     },
     {
-      title: 'Hospitality Management',
-      desc: '5-star room blocks, VIP protocol handling, curated fine dining, delegate concierges, and guest relations.'
+      title: 'Corporate MICE Wing',
+      desc: 'Dedicated conference, incentive trip, boardroom offsite, stage AV, and delegate hospitality handling.'
     },
     {
-      title: 'On-Ground Operations',
-      desc: 'Statutory government clearances, vendor orchestration, security, and live command-center execution.'
+      title: 'On-Ground Concierge',
+      desc: 'Airport assistance, temple VIP darshan coordination, safari permits, and 24/7 traveler support.'
     }
   ];
 
@@ -43,15 +43,15 @@ export default function StrategyToExecution() {
             {/* Tag */}
             <div className="text-xs sm:text-sm font-extrabold tracking-widest uppercase text-neutral-400 mb-4 sm:mb-6 flex items-center gap-2">
               <span className="px-2 py-0.5 bg-[#fff033] text-black font-black text-xs">02</span>
-              <span className="text-neutral-700">MICE MANAGEMENT PLANNING</span>
+              <span className="text-neutral-700">HOLIDAYS, ECO RETREAT &amp; MICE</span>
             </div>
 
             <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-black leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6">
-              From Strategy to On-Ground Management
+              From First Consultation to Seamless Arrival
             </h2>
 
             <p className="text-neutral-600 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 sm:mb-10">
-              Successful MICE management depends on hundreds of logistical details working together synchronously. Our MICE directors oversee the complete operational framework, from destination research and vendor negotiation to guest movement, technical production, and live event delivery.
+              Great travel starts with honest local advice. Whether you are planning a family pilgrimage across Puri and Chilika, luxury glamping at Eco Retreat Odisha, a Kashmir or Europe escape, or a corporate MICE summit, our planners manage every detail end to end.
             </p>
 
             {/* 4 Pillars Grid with Thin Lines */}

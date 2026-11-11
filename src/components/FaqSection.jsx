@@ -6,28 +6,28 @@ export default function FaqSection({ onOpenInquiry }) {
 
   const faqs = [
     {
-      q: 'What is MICE management and what makes Waves & Breeze the top MICE organisation in Odisha?',
-      a: 'MICE stands for Meetings, Incentives, Conferences, and Exhibitions. Headquartered in Bhubaneswar, Waves and Breeze Hospitality operates as Odisha\'s premier MICE organisation handling complete venue procurement, luxury hotel blocks, VIP transfers, stage AV engineering, and on-ground logistics across all destinations in Odisha and global circuits.'
+      q: 'What travel services does Waves and Breeze Hospitality offer from Bhubaneswar?',
+      a: 'Waves and Breeze Hospitality is a full-service Travel & Holiday DMC headquartered in Old Town, Bhubaneswar. We curate custom Odisha tour packages, Eco Retreat by Odisha Tourism glamping stays, Pan-India holidays (Kashmir, Goa, Rajasthan, Andaman), International holidays (Dubai, Singapore, Thailand, Bali, Europe), 5-star hotel bookings, and corporate MICE programs.'
     },
     {
-      q: 'Are you recognized meetings organisers in Odisha?',
-      a: 'Yes, Waves and Breeze Hospitality is recognized among the premier corporate meetings organisers in Odisha and Bhubaneswar, providing direct venue booking with top 5-star properties (Mayfair Lagoon, Mayfair Waves Puri, Welcomhotel by ITC, Vivanta, Swosti Premium), along with complete delegate hospitality and executive offsite planning.'
+      q: 'Can I consult and book Eco Retreat by Odisha Tourism glamping stays through you?',
+      a: 'Yes. We provide complete consultation, seasonal tariff comparisons, cottage selection (Deluxe Swiss Cottage, Premium Swiss Cottage, Royal Luxury Swiss Cottage, and Presidential Suite), and full trip logistics across all 7 official Eco Retreat Odisha locations: Konark, Satkosia, Bhitarkanika, Daringbadi, Hirakud, Sonapur, and Putsil.'
     },
     {
-      q: 'Which destinations in Odisha do you manage for corporate offsites and MICE events?',
-      a: 'We manage flagship corporate MICE destinations across Odisha including Bhubaneswar (convention halls & Janata Maidan), Puri (Golden Beach luxury resorts), Konark (Marine Drive Eco-Retreat glamping), and Chilika Lake (private catamaran charters and island offsites).'
+      q: 'What Odisha tour packages and India/global holidays do you organize?',
+      a: 'In Odisha, we curate the Golden Triangle (Bhubaneswar, Puri VIP Jagannath Darshan & Konark), Chilika Lake dolphin safaris, Daringbadi pine hill retreats, Bhitarkanika mangroves, and Similipal wildlife tours. For outstation travelers from Odisha, we build end-to-end packages for Kashmir, Goa, Rajasthan, Andaman, Dubai, Singapore, Thailand, Bali, and Europe.'
     },
     {
-      q: 'What scale of corporate meetings and conferences can you handle?',
-      a: 'We manage gatherings ranging from 20-delegate VIP board meetings to 2,500+ delegate national conventions, managing multiple breakout halls, LED display walls, high-definition audio, and simultaneous delegate dining.'
+      q: 'Do you also handle Corporate MICE management and company offsites?',
+      a: 'Yes. Alongside leisure and holiday travel, our specialized Corporate MICE wing organizes executive board meetings, dealer incentive tours, conferences, expos, and gala dinners across top 5-star hotels (Mayfair Lagoon, Mayfair Waves Puri, Welcomhotel by ITC, Vivanta, Swosti Premium) and Eco Retreat group buyouts.'
     },
     {
-      q: 'Do you manage international corporate incentive travel?',
-      a: 'Yes. We have established ground partner alliances in Dubai, Singapore, Thailand, and Bali for turnkey international incentive reward travel and corporate summits.'
+      q: 'Do you organize international holidays and overseas corporate incentive trips?',
+      a: 'Yes. We organize turnkey international family holidays, honeymoons, and corporate incentive delegations across Dubai, Singapore, Thailand, Bali, and Europe — complete with luxury hotel stays, guided sightseeing, and visa guidance.'
     },
     {
-      q: 'Why choose Waves & Breeze Hospitality instead of a generic event broker?',
-      a: 'Our founder Biswaranjan Behera personally oversees your event on the ground. We have direct hotel agreements ensuring guaranteed room inventory, competitive corporate tariffs, and single-point accountability.'
+      q: 'Why plan your trip or corporate retreat directly with Waves & Breeze Hospitality?',
+      a: 'Founder Biswaranjan Behera (+91 9040577429) personally oversees every itinerary from consultation through arrival. With direct hotel & Eco Retreat partnerships across Odisha since 2020, you receive transparent recommendations, confirmed stays, and responsive WhatsApp support.'
     }
   ];
 
@@ -45,12 +45,12 @@ export default function FaqSection({ onOpenInquiry }) {
             </div>
 
             <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-black leading-[1.1] sm:leading-[1.08] mb-4 sm:mb-6">
-              MICE Management<br />
-              FAQs
+              Travel, Eco Retreat<br />
+              &amp; MICE FAQs
             </h2>
 
             <p className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-              Common questions about corporate MICE management, MICE organisation in Odisha, meetings organisers in Odisha, and turnkey event planning.
+              Common questions about Odisha &amp; global tour packages, Eco Retreat by Odisha Tourism bookings, luxury stays, and corporate MICE programs.
             </p>
 
             <button

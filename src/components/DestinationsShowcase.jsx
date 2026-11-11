@@ -24,8 +24,8 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       id: 'konark',
       name: 'Konark',
       state: 'Odisha',
-      tag: 'UNESCO SUN TEMPLE & GLAMPING',
-      desc: 'Architectural wonder of the 13th-century Sun Temple, Marine Drive luxury Swiss tent glamping, private cultural evenings, and sand dunes.',
+      tag: 'UNESCO SUN TEMPLE & ECO RETREAT',
+      desc: 'Architectural wonder of the 13th-century Sun Temple, official Eco Retreat by Odisha Tourism Swiss glamping along Ramchandi Beach, and coastal trails.',
       image: '/destinations/konark_hd.jpg'
     },
     {
@@ -33,31 +33,31 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       name: 'Chilika Lake',
       state: 'Odisha',
       tag: 'LAGOON SAFARIS & DOLPHINS',
-      desc: 'Asia’s largest brackish lagoon, chartered catamarans, Irrawaddy dolphin watching, island offsites, and fresh coastal seafood banquets.',
+      desc: 'Asia’s largest brackish lagoon, chartered boat cruises, Irrawaddy dolphin watching, island picnics, and fresh coastal seafood dining.',
       image: '/destinations/chilika.jpg'
     },
     {
       id: 'daringbadi',
       name: 'Daringbadi',
       state: 'Odisha',
-      tag: 'KASHMIR OF ODISHA & PINE HILLS',
-      desc: 'Pristine 3,000-foot hill station, misty pine forests, fragrant coffee plantations, Midubanda waterfall, and tranquil nature retreats.',
+      tag: 'KASHMIR OF ODISHA & ECO RETREAT',
+      desc: 'Pristine 3,000-foot hill station with Eco Retreat pine valley glamping, fragrant coffee plantations, Midubanda waterfall, and misty valleys.',
       image: '/destinations/daringbadi.jpg'
     },
     {
       id: 'bhitarkanika',
-      name: 'Bhitarkanika & Similipal',
+      name: 'Bhitarkanika & Satkosia',
       state: 'Odisha',
-      tag: 'WILDLIFE SAFARIS & WATERFALLS',
-      desc: 'Estuarine crocodile creek safaris, Barehipani waterfalls, tiger reserve canopy trails, and pristine forest eco-cottage stays.',
+      tag: 'WILDLIFE SAFARIS & ECO RETREATS',
+      desc: 'Estuarine crocodile creek safaris at Pentha Beach & Satkosia Mahanadi Gorge glamping, Barehipani waterfalls, and canopy forest eco-stays.',
       image: '/destinations/bhitarkanika_hd.jpg'
     },
     {
       id: 'dubai',
       name: 'Dubai & Global',
       state: 'International Hubs',
-      tag: 'GLOBAL CONVENTIONS & LUXURY',
-      desc: 'Dubai World Trade Centre, luxury Dubai Marina yacht galas, Burj Khalifa VIP access, and premier international incentive circuits.',
+      tag: 'GLOBAL HOLIDAYS & MICE TRAVEL',
+      desc: 'Custom family escapes, Dubai Marina yachts, Burj Khalifa access, Singapore, Bali, Europe tours, and corporate incentive circuits.',
       image: '/destinations/dubai_hd.jpg'
     }
   ];
@@ -92,10 +92,10 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 text-neutral-600 text-xs sm:text-base leading-relaxed mb-8 sm:mb-14">
             <p>
-              We deliver complete travel and MICE management across Odisha’s premier coastal, cultural, and hill destinations: Puri’s luxury beach resorts, Bhubaneswar’s 5-star auditoriums, Konark’s eco-retreat glamping, Chilika Lake catamaran cruises, and Daringbadi’s misty pine valleys.
+              We plan end-to-end leisure holidays, Eco Retreat by Odisha Tourism glamping camps, and corporate offsites across Puri, Bhubaneswar, Konark, Satkosia, Chilika Lake, Daringbadi, Bhitarkanika, Hirakud, Sonapur &amp; Putsil.
             </p>
             <p>
-              For corporate organizations and travelers with international holiday requirements, our operational capabilities extend to premier global destinations like Dubai, Thailand, and Southeast Asia through confirmed hotel alliances.
+              For travelers heading beyond Odisha, we curate complete holiday packages across Kashmir, Goa, Rajasthan, Andaman, Dubai, Singapore, Thailand, Bali &amp; Europe with trusted hotel alliances.
             </p>
           </div>
         </FadeContent>

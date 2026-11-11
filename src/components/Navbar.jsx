@@ -625,21 +625,21 @@ export default function Navbar({ onOpenInquiry }) {
                   {/* Column 2: Pilgrimage & Cultural Stays */}
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
-                      Pilgrimage &amp; Cultural Stays
+                      Pilgrimage &amp; Eco Retreat Odisha
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
                       {[
                         { num: 'N°01', label: 'Shree Jagannath Temple VIP Darshan', dest: 'Puri & Golden Triangle' },
                         { num: 'N°02', label: 'Konark Sun Temple Heritage Walk', dest: 'Puri & Golden Triangle' },
                         { num: 'N°03', label: 'Bhubaneswar Lingaraj & Caves Tour', dest: 'Puri & Golden Triangle' },
-                        { num: 'N°04', label: 'Raghurajpur Artisan Village Trail', dest: 'Puri & Golden Triangle' },
-                        { num: 'N°05', label: 'Gopalpur-on-Sea Beach Retreat', dest: 'Puri & Golden Triangle' },
-                        { num: 'N°06', label: 'Konark Marine Drive Eco-Retreat', dest: 'Puri & Golden Triangle' }
+                        { num: 'N°04', label: 'Satkosia Gorge Eco Retreat Glamping', dest: 'Eco Retreat Satkosia', service: 'Eco Retreat by Odisha Tourism (Glamping)' },
+                        { num: 'N°05', label: 'Daringbadi & Putsil Eco Retreat', dest: 'Eco Retreat Daringbadi', service: 'Eco Retreat by Odisha Tourism (Glamping)' },
+                        { num: 'N°06', label: 'Konark Marine Drive Eco-Retreat', dest: 'Eco Retreat Konark', service: 'Eco Retreat by Odisha Tourism (Glamping)' }
                       ].map((item) => (
                         <li key={item.num}>
                           <button
                             type="button"
-                            onClick={() => openPackageInquiry(item.dest, item.label, 'Puri Jagannath VIP Darshan & Coastal')}
+                            onClick={() => openPackageInquiry(item.dest, item.label, item.service || 'Puri Jagannath VIP Darshan & Coastal')}
                             className="hover:text-[#d97706] transition-colors block text-left w-full"
                           >
                             <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
@@ -658,14 +658,14 @@ export default function Navbar({ onOpenInquiry }) {
                       {[
                         { num: 'N°01', label: 'Puri Oceanfront Conclaves', dest: 'Puri & Golden Triangle' },
                         { num: 'N°02', label: 'Bhubaneswar Mega Conventions', dest: 'Bhubaneswar Convention & MICE' },
-                        { num: 'N°03', label: 'Eco-Retreat Glamping Bookings', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°03', label: 'Eco Retreat by Odisha Tourism (All 7)', dest: 'Eco Retreat by Odisha Tourism (All 7 Sites)', service: 'Eco Retreat by Odisha Tourism (Glamping)' },
                         { num: 'N°04', label: '5-Star Hotel Alliances (Mayfair/ITC)', dest: 'Bhubaneswar Convention & MICE' },
-                        { num: 'N°05', label: 'Dealer Incentive Meets', dest: 'Bhubaneswar Convention & MICE' }
+                        { num: 'N°05', label: 'Hirakud & Sonapur Eco Retreat', dest: 'Eco Retreat Hirakud', service: 'Eco Retreat by Odisha Tourism (Glamping)' }
                       ].map((item) => (
                         <li key={item.num}>
                           <button
                             type="button"
-                            onClick={() => openPackageInquiry(item.dest, item.label, 'Corporate MICE / Offsite / Conference')}
+                            onClick={() => openPackageInquiry(item.dest, item.label, item.service || 'Corporate MICE / Offsite / Conference')}
                             className="hover:text-[#d97706] transition-colors block text-left w-full"
                           >
                             <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
@@ -679,10 +679,18 @@ export default function Navbar({ onOpenInquiry }) {
 
                 {/* Bottom Bar inside mega menu */}
                 <div className="pt-3 border-t border-[#ebdccf] flex items-center justify-between text-xs text-neutral-600">
-                  <a href="#packages" className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
-                    <span>View all Odisha tour packages</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </a>
+                  <div className="flex items-center gap-4">
+                    <a href="#packages" onClick={() => setActiveMegaMenu(null)} className="font-bold text-black hover:text-[#d97706] flex items-center gap-1">
+                      <span>View all Odisha tour packages</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </a>
+                    <span className="text-neutral-300">|</span>
+                    <a href="#eco-retreat" onClick={() => setActiveMegaMenu(null)} className="font-bold text-[#14532d] hover:text-[#d97706] flex items-center gap-1.5">
+                      <img src="/eco-retreat-odisha.png" alt="Eco Retreat Odisha" className="h-4 w-auto object-contain" />
+                      <span>All 7 Eco Retreat Camps</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </a>
+                  </div>
                   <span className="text-neutral-400">Headquartered in Old Town, Bhubaneswar</span>
                 </div>
 
@@ -711,6 +719,13 @@ export default function Navbar({ onOpenInquiry }) {
               className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
             >
               Odisha Tour Packages
+            </a>
+            <a 
+              href="#eco-retreat" 
+              onClick={() => setMobileMenuOpen(false)} 
+              className="block text-lg font-bold text-[#14532d] border-b border-neutral-100 pb-2.5"
+            >
+              Eco Retreat by Odisha Tourism
             </a>
             <a 
               href="#packages" 
