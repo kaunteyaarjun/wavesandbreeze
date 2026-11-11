@@ -13,16 +13,6 @@ export const teamData = {
       whatsapp: '919040577429',
       bio: 'Hospitality entrepreneur leading high-level corporate MICE strategy, government delegations, 5-star venue contracting, and destination management across Odisha and premier global circuits.',
       focus: 'Corporate Partnerships, Mega Conventions & Strategic Venue Procurement'
-    },
-    {
-      name: 'Sameer Kumar Panigrahi',
-      role: 'Co-Founder & Director of Operations',
-      initials: 'SP',
-      phone: '8249657614',
-      phoneFormatted: '+91 82496 57614',
-      whatsapp: '918249657614',
-      bio: 'Operations specialist overseeing end-to-end event execution, VIP protocol management, transport logistics, stage AV engineering, and international corporate incentive tours.',
-      focus: 'On-Ground Operations, Delegate Experience & Global Incentive Logistics'
     }
   ],
   stats: [

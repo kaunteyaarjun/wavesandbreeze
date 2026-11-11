@@ -7,7 +7,7 @@ export default function ServicesList({ onOpenInquiry }) {
     {
       num: '01',
       title: 'Curated Odisha Tour Packages & Heritage Holidays',
-      desc: 'Handcrafted leisure itineraries across Puri, Konark, Chilika Lake, Daringbadi, and Bhitarkanika. Includes VIP Jagannath temple darshan, luxury beachside stays, private chauffeur transfers, and authentic Odia dining.',
+      desc: 'Handcrafted leisure itineraries across Puri, Konark, Chilika Lake, Daringbadi, and Bhitarkanika. Includes VIP Jagannath temple darshan, luxury beachside stays, guided sightseeing, and authentic Odia dining.',
     },
     {
       num: '02',
@@ -16,8 +16,8 @@ export default function ServicesList({ onOpenInquiry }) {
     },
     {
       num: '03',
-      title: 'Verified Cab & Fleet Rentals Across Odisha',
-      desc: 'Spotless private transport fleet: AC Sedans (Dzire), Premium SUVs (Innova Crysta), Luxury Mini-Coaches (Force Urbania / Tempo Traveller), and heavy Volvo coaches with punctual, verified local chauffeurs.',
+      title: 'Pan-India & International Holiday Packages',
+      desc: 'Bespoke leisure, honeymoon, and family holiday packages across Kashmir, Goa, Rajasthan, Andaman, Dubai, Singapore, Thailand, Bali, and Europe — planned end-to-end with flights, stays, and curated sightseeing.',
     },
     {
       num: '04',
@@ -48,7 +48,7 @@ export default function ServicesList({ onOpenInquiry }) {
             </div>
             <div className="lg:col-span-4">
               <p className="text-neutral-400 text-sm sm:text-base leading-relaxed font-normal">
-                Whether you need a bespoke family holiday across Puri and Chilika, verified cab rentals, or a 1,500-delegate corporate convention, we deliver seamless hospitality backed by native Odisha mastery.
+                Whether you need a bespoke family holiday across Puri and Chilika, a pan-India/global escape, or a 1,500-delegate corporate convention, we deliver seamless hospitality backed by native Odisha mastery.
               </p>
             </div>
           </div>

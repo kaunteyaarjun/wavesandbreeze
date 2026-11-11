@@ -13,7 +13,7 @@ const WhatsAppIcon = ({ className = "w-4 h-4 text-white" }) => (
 export default function TourPackagesSection({ onOpenInquiry }) {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['All', 'Odisha Holidays', 'Wildlife & Nature', 'Hill Stations', 'Corporate MICE'];
+  const categories = ['All', 'Odisha Holidays', 'India Holidays', 'International', 'Wildlife & Nature', 'Hill Stations', 'Corporate MICE'];
 
   const filteredPackages = activeCategory === 'All'
     ? tourPackagesData
@@ -46,7 +46,7 @@ export default function TourPackagesSection({ onOpenInquiry }) {
               </h2>
             </div>
             <p className="text-neutral-600 text-sm sm:text-base max-w-md leading-relaxed">
-              Every tour is handled with private verified chauffeurs, handpicked 4/5-star oceanfront &amp; heritage hotels, and personalized VIP assistance across Odisha.
+              Every tour is crafted with handpicked 4/5-star oceanfront &amp; heritage hotels, seamless sightseeing logistics, and personalized VIP assistance across Odisha and beyond.
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export default function TourPackagesSection({ onOpenInquiry }) {
                       <span>{pkg.duration}</span>
                     </div>
                     <span className="text-[11px] font-semibold text-neutral-200">
-                      Private Chauffeur Tour
+                      All-Inclusive Curated Tour
                     </span>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export default function TourPackagesSection({ onOpenInquiry }) {
                   {/* Inclusions summary */}
                   <div className="text-[11px] text-neutral-500 flex items-center gap-1 font-medium">
                     <Sparkles className="w-3 h-3 text-[#fff033]" />
-                    <span>Includes: Hotels + AC Cab + Meals + Transfers</span>
+                    <span>Includes: Stays + Sightseeing + Meals + Transfers</span>
                   </div>
                 </div>
               </div>
@@ -157,7 +157,11 @@ export default function TourPackagesSection({ onOpenInquiry }) {
                 </button>
 
                 <button
-                  onClick={() => onOpenInquiry({ destination: pkg.destination, notes: `Interested in: ${pkg.title} (${pkg.duration})` })}
+                  onClick={() => onOpenInquiry({
+                    destination: pkg.destination,
+                    service: pkg.category === 'Corporate MICE' ? 'Corporate MICE / Offsite / Conference' : pkg.category === 'International' ? 'International Holiday Package' : pkg.category === 'India Holidays' ? 'India Domestic Tour Package' : 'Odisha Tour & Holiday Package',
+                    notes: `Interested in: ${pkg.title} (${pkg.duration})`
+                  })}
                   className="w-full bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-black py-2 px-4 font-semibold text-xs rounded-none transition-colors flex items-center justify-center gap-1.5"
                 >
                   <span>Customise Itinerary</span>
@@ -178,7 +182,7 @@ export default function TourPackagesSection({ onOpenInquiry }) {
               Looking for a custom family vacation, temple pilgrimage, or corporate offsite?
             </h3>
             <p className="text-xs sm:text-sm text-neutral-400 mt-2 max-w-xl">
-              Tell us your dates, group size, and destination preferences. Our founders Biswaranjan &amp; Sameer will design a bespoke itinerary within 4 hours.
+              Tell us your dates, group size, and destination preferences. Our founder Biswaranjan Behera will design a bespoke itinerary within 4 hours.
             </p>
           </div>
 

@@ -29,7 +29,7 @@ export default function CtaBanner({ onOpenInquiry }) {
           </h2>
 
           <p className="text-slate-200 text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
-            Connect directly with Biswaranjan Behera or Sameer Kumar Panigrahi to receive a tailored blueprint, VIP venue options, and complete cost breakdown within 24 hours.
+            Connect directly with Biswaranjan Behera to receive a tailored blueprint, VIP venue options, and complete cost breakdown within 24 hours.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">

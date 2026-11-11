@@ -33,6 +33,8 @@ const popularPackages = [
     image: '/destinations/goa.jpg',
     locations: ['CALANGUTE', 'OLD GOA', 'PALOLEM'],
     tourButtonText: 'VIEW GOA TOUR',
+    modalDestination: 'Goa',
+    modalService: 'India Domestic Tour Package',
     targetAnchor: '#packages'
   },
   {
@@ -43,9 +45,11 @@ const popularPackages = [
     categoryBadge: 'MIDDLE EAST & MICE',
     italicSubtitle: 'Skylines, desert dunes & luxury galas',
     description: 'Dubai holiday & corporate MICE packages with 5-star desert resorts, yacht charters, and Burj Khalifa tours from Bhubaneswar.',
-    image: '/destinations/dubai.jpg',
+    image: '/destinations/dubai_hd.jpg',
     locations: ['DOWNTOWN BURJ', 'DUBAI MARINA', 'DESERT SAFARI'],
     tourButtonText: 'VIEW DUBAI TOUR',
+    modalDestination: 'Dubai',
+    modalService: 'International Holiday Package',
     targetAnchor: '#services'
   },
   {
@@ -59,6 +63,8 @@ const popularPackages = [
     image: '/destinations/thailand.jpg',
     locations: ['BANGKOK', 'PATTAYA', 'PHUKET'],
     tourButtonText: 'VIEW THAILAND TOUR',
+    modalDestination: 'Thailand',
+    modalService: 'International Holiday Package',
     targetAnchor: '#packages'
   },
   {
@@ -72,6 +78,8 @@ const popularPackages = [
     image: '/destinations/europe.jpg',
     locations: ['PARIS', 'SWISS ALPS', 'ROME'],
     tourButtonText: 'VIEW EUROPE TOUR',
+    modalDestination: 'Europe',
+    modalService: 'International Holiday Package',
     targetAnchor: '#packages'
   },
   {
@@ -85,6 +93,8 @@ const popularPackages = [
     image: '/destinations/singapore.jpg',
     locations: ['MARINA BAY', 'GARDENS', 'SENTOSA'],
     tourButtonText: 'VIEW SINGAPORE TOUR',
+    modalDestination: 'Singapore',
+    modalService: 'International Holiday Package',
     targetAnchor: '#packages'
   },
   {
@@ -98,6 +108,8 @@ const popularPackages = [
     image: '/destinations/kashmir.jpg',
     locations: ['SRINAGAR', 'GULMARG', 'PAHALGAM'],
     tourButtonText: 'VIEW KASHMIR TOUR',
+    modalDestination: 'Kashmir',
+    modalService: 'India Domestic Tour Package',
     targetAnchor: '#packages'
   },
   {
@@ -111,6 +123,8 @@ const popularPackages = [
     image: '/destinations/jagannath.jpg',
     locations: ['JAGANNATH TEMPLE', 'BLUE FLAG BEACH', 'KONARK SUN TEMPLE'],
     tourButtonText: 'VIEW PURI TOUR',
+    modalDestination: 'Puri & Golden Triangle',
+    modalService: 'Odisha Tour & Holiday Package',
     targetAnchor: '#packages'
   },
   {
@@ -121,9 +135,11 @@ const popularPackages = [
     categoryBadge: 'ODISHA HILL STATION',
     italicSubtitle: '3,000 ft pine canopies, coffee gardens & misty valleys',
     description: 'Daringbadi pine forest escapes with Midubanda waterfall, coffee estates, Mandasaru Silent Valley & mountain resort cottages.',
-    image: '/destinations/daringbadi.jpg',
+    image: '/destinations/daringbadi_hd.jpg',
     locations: ['PINE FORESTS', 'MIDUBANDA FALLS', 'MANDASARU GORGE'],
     tourButtonText: 'VIEW DARINGBADI TOUR',
+    modalDestination: 'Daringbadi Hill Station',
+    modalService: 'Odisha Tour & Holiday Package',
     targetAnchor: '#packages'
   }
 ];
@@ -146,7 +162,7 @@ export default function Hero({ onOpenInquiry }) {
   // Direct WhatsApp inquiry trigger opening conversation with prefilled details
   const handleEnquireWhatsApp = () => {
     const text = encodeURIComponent(
-      `Hello Waves and Breeze Hospitality! 👋\n\nI want to inquire about the ${activePackage.name} tour package (${activePackage.subRegion}):\n• Destination: ${activePackage.name}\n• Category: ${activePackage.categoryBadge}\n• Key Places: ${activePackage.locations.join(', ')}\n\nPlease share customized itinerary options, hotel inclusions, cab tariffs, and best pricing from Bhubaneswar.`
+      `Hello Waves and Breeze Hospitality! 👋\n\nI want to inquire about the ${activePackage.name} tour package (${activePackage.subRegion}):\n• Destination: ${activePackage.name}\n• Category: ${activePackage.categoryBadge}\n• Key Places: ${activePackage.locations.join(', ')}\n\nPlease share customized itinerary options, hotel inclusions, sightseeing details, and best pricing from Bhubaneswar.`
     );
     window.open(`https://wa.me/${teamData.founders[0].whatsapp}?text=${text}`, '_blank');
   };
@@ -180,21 +196,40 @@ export default function Hero({ onOpenInquiry }) {
         </div>
       ))}
 
-      {/* Decorative Dashed Flight Trajectory Arc Across Sky (Signature Travel Mart Motif) */}
+      {/* Decorative Dashed Flight Trajectory Arc Across Sky with Animated Plane Silhouette */}
       <svg 
-        className="absolute top-12 left-1/4 w-[600px] h-[300px] pointer-events-none opacity-40 hidden md:block z-10" 
+        className="absolute top-12 left-1/4 w-[600px] h-[300px] pointer-events-none hidden md:block z-10" 
         viewBox="0 0 600 300" 
         fill="none"
+        aria-hidden="true"
       >
         <path
+          id="hero-flight-arc"
           d="M 20 220 C 180 40, 420 40, 580 200"
           stroke="#ffffff"
+          strokeOpacity="0.4"
           strokeWidth="1.5"
           strokeDasharray="6 8"
         />
-        {/* Plane / Compass Waypoint on the Arc */}
-        <circle cx="300" cy="78" r="6" fill="#f5b324" />
-        <circle cx="300" cy="78" r="14" stroke="#f5b324" strokeWidth="1" opacity="0.6" />
+        {/* Route Origin & Destination Pins */}
+        <circle cx="20" cy="220" r="2.5" fill="#ffffff" fillOpacity="0.45" />
+        <circle cx="580" cy="200" r="3" fill="#f5b324" fillOpacity="0.6" />
+        {/* Animated Plane Silhouette Gliding Along Full Arc Until End */}
+        <g data-testid="hero-flight-plane">
+          <animateMotion
+            dur="6s"
+            repeatCount="indefinite"
+            rotate="auto"
+            calcMode="linear"
+          >
+            <mpath href="#hero-flight-arc" />
+          </animateMotion>
+          <path
+            d="M 14 0 C 11 -1.8, 7 -2.2, 3 -2.2 L -5 -13.5 L -7.8 -13.5 L -3.2 -2.0 L -9.2 -1.6 L -12.8 -5.8 L -14.2 -5.8 L -12.0 -0.8 L -13.5 0 L -12.0 0.8 L -14.2 5.8 L -12.8 5.8 L -9.2 1.6 L -3.2 2.0 L -7.8 13.5 L -5 13.5 L 3 2.2 C 7 2.2, 11 1.8, 14 0 Z"
+            fill="#f5b324"
+            fillOpacity="0.92"
+          />
+        </g>
       </svg>
 
       {/* Top Right Floating Badge (Like the rotating circular emblem in the reference) */}
@@ -268,9 +303,16 @@ export default function Hero({ onOpenInquiry }) {
             {/* Dual Action Pill Buttons (Gold Gradient + Glassmorphic Enquire) */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               
-              {/* Primary Golden Pill Button with Dark Circle Arrow */}
-              <a
-                href={activePackage.targetAnchor}
+              {/* Primary Golden Pill Button opening Quick Inquiry Modal with Prefilled Destination */}
+              <button
+                type="button"
+                onClick={() =>
+                  onOpenInquiry({
+                    destination: activePackage.modalDestination || activePackage.name,
+                    service: activePackage.modalService || 'Odisha Tour & Holiday Package',
+                    notes: `Enquiring about ${activePackage.name} Tour (${activePackage.subRegion}) — Highlights: ${activePackage.locations.join(', ')}`
+                  })
+                }
                 className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#e5a93c] via-[#f5b324] to-[#e5a93c] hover:brightness-110 active:scale-98 text-black pl-6 sm:pl-7 pr-2 py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-xl transition-all"
               >
                 <span className="tracking-wide uppercase font-extrabold text-[12px] sm:text-[13px]">
@@ -279,7 +321,7 @@ export default function Hero({ onOpenInquiry }) {
                 <span className="w-8 h-8 rounded-full bg-black text-[#f5b324] flex items-center justify-center font-bold transition-transform group-hover:translate-x-0.5">
                   ➔
                 </span>
-              </a>
+              </button>
 
               {/* Secondary Glassmorphic Enquire Button with WhatsApp Icon */}
               <button

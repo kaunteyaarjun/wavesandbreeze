@@ -4,7 +4,7 @@ export default function MiceStrip() {
   const items = [
     { letter: 'T', title: 'Odisha Tours & Holidays', sub: 'Puri, Konark, Chilika & Daringbadi' },
     { letter: 'M', title: 'Corporate MICE Management', sub: 'Meetings, Summits & Galas' },
-    { letter: 'C', title: 'Cab & Fleet Rentals', sub: 'Innova, Crysta & Volvo Coaches' },
+    { letter: 'G', title: 'Global Holiday Packages', sub: 'Kashmir, Goa, Dubai, Bali & Europe' },
     { letter: 'H', title: '5-Star Resort Stays', sub: 'Mayfair, Sterling & Eco-Retreats' },
   ];
 

@@ -24,7 +24,7 @@ export default function ContactSection() {
 
   const handleWhatsAppDirect = () => {
     const text = encodeURIComponent(
-      `Hello Biswaranjan & Sameer! 👋\n\nI want to organize a MICE event with Waves & Breeze:\n- Name: ${formData.name || 'Corporate Planner'}\n- Company: ${formData.company || 'Enterprise'}\n- Destination: ${formData.destination}\n- Type: ${formData.eventType}\n- Delegates: ${formData.delegates}\n- Message: ${formData.message || 'Please connect for proposal.'}`
+      `Hello Biswaranjan! 👋\n\nI want to organize a MICE event with Waves & Breeze:\n- Name: ${formData.name || 'Corporate Planner'}\n- Company: ${formData.company || 'Enterprise'}\n- Destination: ${formData.destination}\n- Type: ${formData.eventType}\n- Delegates: ${formData.delegates}\n- Message: ${formData.message || 'Please connect for proposal.'}`
     );
     window.open(`https://wa.me/${teamData.founders[0].whatsapp}?text=${text}`, '_blank');
   };
@@ -36,13 +36,13 @@ export default function ContactSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 text-brand-goldDark text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Direct Line To Founders</span>
+            <span>Direct Line To Leadership</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             Connect With Our MICE Specialists
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">
-            Visit our registered office in Old Town Bhubaneswar or reach out directly to our founders for instantaneous support and proposals.
+            Visit our registered office in Old Town Bhubaneswar or reach out directly to our founder for instantaneous support and proposals.
           </p>
         </div>
 
@@ -85,17 +85,17 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Direct Founders Call Cards */}
+            {/* Direct Founder Call Card */}
             <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200">
               <h4 className="font-display text-base font-bold text-slate-900 mb-4">
-                Direct Contact With The Founders
+                Direct Contact With Founder
               </h4>
 
               <div className="space-y-4">
-                {/* Founder 1 */}
+                {/* Founder */}
                 <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-between gap-3">
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Founder</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Founder &amp; Managing Director</span>
                     <h5 className="font-bold text-sm text-slate-900">{teamData.founders[0].name}</h5>
                     <a href={`tel:${teamData.founders[0].phone}`} className="text-xs font-bold text-brand-royal hover:underline">
                       +91 {teamData.founders[0].phone}
@@ -120,35 +120,6 @@ export default function ContactSection() {
                     </a>
                   </div>
                 </div>
-
-                {/* Founder 2 */}
-                <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-between gap-3">
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Co-Founder</span>
-                    <h5 className="font-bold text-sm text-slate-900">{teamData.founders[1].name}</h5>
-                    <a href={`tel:${teamData.founders[1].phone}`} className="text-xs font-bold text-brand-royal hover:underline">
-                      +91 {teamData.founders[1].phone}
-                    </a>
-                  </div>
-                  <div className="flex gap-2">
-                    <a
-                      href={`tel:${teamData.founders[1].phone}`}
-                      className="w-9 h-9 rounded-full bg-brand-navy text-white flex items-center justify-center hover:bg-brand-royal transition-colors"
-                      title="Call Sameer"
-                    >
-                      <Phone className="w-4 h-4 text-brand-gold" />
-                    </a>
-                    <a
-                      href={`https://wa.me/${teamData.founders[1].whatsapp}?text=Hello%20Sameer%20Kumar%20Panigrahi%2C%20I%20want%20to%20discuss%20a%20MICE%20event.`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition-colors"
-                      title="WhatsApp Sameer"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -164,7 +135,7 @@ export default function ContactSection() {
                   Proposal Request Received!
                 </h3>
                 <p className="text-slate-600 text-sm max-w-md mx-auto mb-6">
-                  Thank you! Biswaranjan and Sameer have been notified. A comprehensive corporate itinerary and customized pricing will be sent to your contact details.
+                  Thank you! Biswaranjan Behera has been notified. A comprehensive corporate itinerary and customized pricing will be sent to your contact details.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-3">
                   <button

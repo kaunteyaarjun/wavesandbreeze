@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
 
             <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Odisha's premier Travel DMC &amp; MICE organization: Curated Odisha Tour Packages, verified Cab &amp; Fleet rentals, and end-to-end Corporate MICE Management for families, pilgrims, and enterprises.
+              Odisha's premier Travel DMC &amp; MICE organization: Curated Odisha &amp; global Tour Packages, 5-star resort bookings, and end-to-end Corporate MICE Management for families, pilgrims, and enterprises.
             </p>
 
             <div className="space-y-2 text-xs text-neutral-400 pt-1">
@@ -43,10 +43,6 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#fff033] shrink-0" />
                 <span>Biswaranjan Behera (Founder): <a href="tel:9040577429" className="text-white hover:text-[#fff033] font-semibold">+91 9040577429</a></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#fff033] shrink-0" />
-                <span>Sameer Kumar Panigrahi (Co-Founder): <a href="tel:8249657614" className="text-white hover:text-[#fff033] font-semibold">+91 8249657614</a></span>
               </div>
               <div className="flex items-start gap-2 pt-1">
                 <MapPin className="w-3.5 h-3.5 text-[#fff033] shrink-0 mt-0.5" />
@@ -68,7 +64,7 @@ export default function Footer() {
                 <a href="#destinations" className="hover:text-white transition-colors block py-1">Destinations</a>
               </li>
               <li>
-                <a href="#founders" className="hover:text-white transition-colors block py-1">Founders</a>
+                <a href="#founders" className="hover:text-white transition-colors block py-1">Leadership</a>
               </li>
               <li>
                 <a href="#process" className="hover:text-white transition-colors block py-1">Management Process</a>
@@ -89,7 +85,7 @@ export default function Footer() {
                 <a href="#packages" className="hover:text-white transition-colors block py-1">Odisha Tour Packages</a>
               </li>
               <li>
-                <a href="#fleet" className="hover:text-white transition-colors block py-1">Cab &amp; Fleet Rentals</a>
+                <a href="#packages" className="hover:text-white transition-colors block py-1">India &amp; Global Holidays</a>
               </li>
               <li>
                 <a href="#packages" className="hover:text-white transition-colors block py-1">Puri &amp; Golden Triangle</a>
@@ -116,12 +112,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:8249657614" className="hover:text-white transition-colors flex items-center gap-1.5 py-1">
-                  <span>Call Sameer</span>
-                  <ArrowUpRight className="w-3 h-3 text-[#fff033]" />
-                </a>
-              </li>
-              <li>
                 <a
                   href={`https://wa.me/${teamData.founders[0].whatsapp}?text=Hello%20Waves%20and%20Breeze%20Hospitality%2C%20I%20want%20to%20plan%20a%20corporate%20MICE%20management%20solution.`}
                   target="_blank"
@@ -143,7 +133,7 @@ export default function Footer() {
             &copy; {currentYear} Waves and Breeze Hospitality. All Rights Reserved.
           </p>
           <div className="font-extrabold uppercase tracking-widest text-neutral-400 text-[10px] sm:text-[11px]">
-            ODISHA TOURS • CAB RENTALS • RESORTS • CORPORATE MICE
+            ODISHA TOURS • GLOBAL HOLIDAYS • RESORTS • CORPORATE MICE
           </div>
           <div className="flex items-center gap-3 text-neutral-500 text-[11px]">
             <span>Bhubaneswar, Odisha</span>

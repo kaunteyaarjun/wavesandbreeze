@@ -27,7 +27,7 @@ export default function FaqSection({ onOpenInquiry }) {
     },
     {
       q: 'Why choose Waves & Breeze Hospitality instead of a generic event broker?',
-      a: 'Our founders Biswaranjan Behera and Sameer Kumar Panigrahi personally oversee your event on the ground. We have direct hotel agreements ensuring guaranteed room inventory, competitive corporate tariffs, and single-point accountability.'
+      a: 'Our founder Biswaranjan Behera personally oversees your event on the ground. We have direct hotel agreements ensuring guaranteed room inventory, competitive corporate tariffs, and single-point accountability.'
     }
   ];
 

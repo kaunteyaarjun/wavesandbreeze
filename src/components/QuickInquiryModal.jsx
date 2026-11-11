@@ -14,6 +14,32 @@ const WhatsAppIcon = ({ className = "w-5 h-5 text-white" }) => (
   </svg>
 );
 
+const PRESET_SERVICES = [
+  'Odisha Tour & Holiday Package',
+  'India Domestic Tour Package',
+  'International Holiday Package',
+  'Corporate MICE / Offsite / Conference',
+  'Puri Jagannath VIP Darshan & Coastal',
+  '5-Star Hotel & Eco-Retreat Booking'
+];
+
+const PRESET_DESTINATIONS = [
+  { value: 'Kashmir', label: 'Kashmir (Srinagar, Gulmarg & Pahalgam)' },
+  { value: 'Goa', label: 'Goa Beaches & Coastal Holidays' },
+  { value: 'Europe', label: 'Europe (Paris, Swiss Alps, Rome)' },
+  { value: 'Dubai', label: 'Dubai & Middle East Holidays / MICE' },
+  { value: 'Singapore', label: 'Singapore (Marina Bay & Sentosa)' },
+  { value: 'Thailand', label: 'Thailand (Bangkok, Pattaya & Phuket)' },
+  { value: 'Bali', label: 'Bali (Island & Temple Escapes)' },
+  { value: 'Rajasthan', label: 'Rajasthan (Jaipur, Udaipur & Desert)' },
+  { value: 'Andaman', label: 'Andaman Islands (Havelock & Neil)' },
+  { value: 'Puri & Golden Triangle', label: 'Puri & Golden Triangle (Bhubaneswar-Konark)' },
+  { value: 'Chilika Lake & Mangalajodi', label: 'Chilika Lake & Mangalajodi Bird Sanctuary' },
+  { value: 'Daringbadi Hill Station', label: 'Daringbadi (Kashmir of Odisha)' },
+  { value: 'Bhitarkanika Wildlife Safari', label: 'Bhitarkanika Mangrove & Wildlife Safari' },
+  { value: 'Bhubaneswar Convention & MICE', label: 'Bhubaneswar (Corporate MICE & Conventions)' }
+];
+
 export default function QuickInquiryModal({ isOpen, onClose, initialData = {} }) {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,7 +48,7 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
     email: '',
     destination: initialData?.destination || 'Puri & Golden Triangle',
     delegates: initialData?.delegates || '2 - 6 Travelers (Family / Small Group)',
-    eventType: initialData?.service || 'Odisha Tour Package',
+    eventType: initialData?.service || 'Odisha Tour & Holiday Package',
     datePreference: 'Flexible Dates',
     notes: initialData?.notes || ''
   });
@@ -30,16 +56,17 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    if (initialData) {
+    if (isOpen) {
+      setSubmitted(false);
       setFormData(prev => ({
         ...prev,
-        destination: initialData.destination || prev.destination,
-        eventType: initialData.service || prev.eventType,
-        delegates: initialData.delegates || prev.delegates,
-        notes: initialData.notes || prev.notes
+        destination: initialData?.destination || 'Puri & Golden Triangle',
+        eventType: initialData?.service || 'Odisha Tour & Holiday Package',
+        delegates: initialData?.delegates || prev.delegates || '2 - 6 Travelers (Family / Small Group)',
+        notes: initialData?.notes ?? ''
       }));
     }
-  }, [initialData]);
+  }, [initialData, isOpen]);
 
   if (!isOpen) return null;
 
@@ -101,7 +128,7 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none bg-[#fff033] text-black text-[11px] font-extrabold uppercase tracking-wider mb-1.5">
                 <Sparkles className="w-3 h-3 text-black" />
-                Odisha Tours • Cabs • Corporate MICE
+                Odisha Tours • Global Holidays • Corporate MICE
               </div>
               <h3 className="font-display text-2xl font-bold text-neutral-900">
                 Plan Your Journey &amp; Event
@@ -154,11 +181,12 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
                   onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
                   className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white"
                 >
-                  <option value="Odisha Holiday / Family Tour Package">Odisha Tour &amp; Holiday Package</option>
-                  <option value="Corporate MICE / Offsite / Conference">Corporate MICE / Offsite / Conclave</option>
-                  <option value="Puri Jagannath VIP Darshan & Golden Triangle">Puri Jagannath VIP Darshan &amp; Coastal</option>
-                  <option value="Cab & Fleet Rental (Innova / Coach)">Cab &amp; Fleet Rental (Innova / Coach)</option>
-                  <option value="Luxury Hotel / Eco-Retreat Booking">5-Star Hotel &amp; Eco-Retreat Booking</option>
+                  {!PRESET_SERVICES.includes(formData.eventType) && formData.eventType && (
+                    <option value={formData.eventType}>{formData.eventType}</option>
+                  )}
+                  {PRESET_SERVICES.map((srv) => (
+                    <option key={srv} value={srv}>{srv}</option>
+                  ))}
                 </select>
               </div>
             </div>
@@ -171,12 +199,12 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
                   onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                   className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white"
                 >
-                  <option value="Puri & Golden Triangle">Puri &amp; Golden Triangle (Bhubaneswar-Konark)</option>
-                  <option value="Chilika Lake & Mangalajodi">Chilika Lake &amp; Mangalajodi Bird Sanctuary</option>
-                  <option value="Daringbadi Hill Station">Daringbadi (Kashmir of Odisha)</option>
-                  <option value="Bhitarkanika Wildlife Safari">Bhitarkanika Mangrove &amp; Crocodile Safari</option>
-                  <option value="Bhubaneswar City / Airport Cab">Bhubaneswar (Conventions &amp; Airport Cabs)</option>
-                  <option value="Dubai & International MICE">Dubai &amp; International MICE / Excursions</option>
+                  {!PRESET_DESTINATIONS.some(d => d.value === formData.destination) && formData.destination && (
+                    <option value={formData.destination}>{formData.destination}</option>
+                  )}
+                  {PRESET_DESTINATIONS.map((dest) => (
+                    <option key={dest.value} value={dest.value}>{dest.label}</option>
+                  ))}
                 </select>
               </div>
 
@@ -188,8 +216,9 @@ export default function QuickInquiryModal({ isOpen, onClose, initialData = {} })
                   className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm bg-white"
                 >
                   <option value="1 - 3 Travelers (Couple / Solo)">1 - 3 Travelers (Couple / Solo)</option>
-                  <option value="4 - 7 Travelers (Family / Innova)">4 - 7 Travelers (Family / Innova)</option>
-                  <option value="8 - 25 Travelers (Group / Tempo Traveller)">8 - 25 Travelers (Group / Tempo Traveller)</option>
+                  <option value="2 - 6 Travelers (Family / Small Group)">2 - 6 Travelers (Family / Small Group)</option>
+                  <option value="4 - 7 Travelers (Family Group)">4 - 7 Travelers (Family Group)</option>
+                  <option value="8 - 25 Travelers (Extended Group)">8 - 25 Travelers (Extended Group)</option>
                   <option value="25 - 100+ Delegates (Corporate Offsite)">25 - 100+ Delegates (Corporate Offsite)</option>
                   <option value="100 - 1000+ Guests (Mega Convention / Expo)">100 - 1000+ Guests (Mega Convention / Expo)</option>
                 </select>

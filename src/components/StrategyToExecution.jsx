@@ -12,7 +12,7 @@ export default function StrategyToExecution() {
     },
     {
       title: 'Hospitality Management',
-      desc: '5-star room blocks, airport fleet convoys, VIP protocol handling, curated fine dining, and guest relations.'
+      desc: '5-star room blocks, VIP protocol handling, curated fine dining, delegate concierges, and guest relations.'
     },
     {
       title: 'On-Ground Operations',
@@ -30,7 +30,7 @@ export default function StrategyToExecution() {
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative rounded-none overflow-hidden shadow-xl bg-neutral-900">
               <img
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=85"
+                src="/destinations/bhubaneswar.jpg"
                 alt="Corporate Summit Floor & Execution"
                 className="w-full h-[260px] sm:h-[420px] lg:h-[600px] object-cover filter contrast-[1.05]"
               />

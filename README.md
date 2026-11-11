@@ -12,9 +12,8 @@ A modern, luxury web platform built for **Waves and Breeze Hospitality**, Odisha
 
 2. **Leadership & Contact Integration**:
    - **Biswaranjan Behera** — Founder & Managing Director (+91 90405 77429)
-   - **Sameer Kumar Panigrahi** — Co-Founder & Director of Operations (+91 82496 57614)
    - **Office Address**: Near Hanuman Temple Lane, Old Town, Bhubaneswar, Odisha - 751002.
-   - One-click phone calling and pre-filled direct WhatsApp message generators for both founders.
+   - One-click phone calling and pre-filled direct WhatsApp message generators for leadership.
 
 3. **Curated Odisha Hotspots Circuit**:
    - **Puri**: Blue Flag Golden Beach resorts (Mayfair Waves, Sterling), beachside gala lawns, Jagannath heritage tours.
@@ -76,7 +75,7 @@ waves-and-breeze/
 │   │   ├── MiceServices.jsx  # Meetings, Incentives, Conferences, Expos
 │   │   ├── WhyChooseUs.jsx   # 3-pillar feature & impact stats
 │   │   ├── EventCostEstimator.jsx # Interactive budget calculator
-│   │   ├── FoundersSection.jsx    # Biswaranjan & Sameer executive spotlight
+│   │   ├── FoundersSection.jsx    # Executive leadership spotlight
 │   │   ├── Testimonials.jsx  # Client review cards
 │   │   ├── CtaBanner.jsx     # Curved CTA banner
 │   │   ├── ContactSection.jsx# Office address & proposal form

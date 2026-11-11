@@ -19,7 +19,7 @@ export default function MiceMethodology({ onOpenInquiry }) {
       num: '03',
       icon: Send,
       title: 'Get Turnkey Proposals in Magical Turnaround Time!',
-      desc: 'Receive direct corporate rates, confirmed room allocations, complete run-sheets, and transparent execution plans personally verified by our founders.'
+      desc: 'Receive direct corporate rates, confirmed room allocations, complete run-sheets, and transparent execution plans personally verified by our founder.'
     }
   ];
 
@@ -87,7 +87,7 @@ export default function MiceMethodology({ onOpenInquiry }) {
                 Got an upcoming event?
               </h4>
               <p className="text-xs sm:text-sm text-slate-300 mt-0.5">
-                Talk directly with Biswaranjan or Sameer to reserve dates and inspect venue floor plans.
+                Talk directly with Biswaranjan Behera to reserve dates and inspect venue floor plans.
               </p>
             </div>
           </div>

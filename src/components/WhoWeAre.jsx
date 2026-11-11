@@ -29,11 +29,11 @@ export default function WhoWeAre({ onOpenInquiry }) {
             <div className="lg:col-span-6 relative flex justify-center lg:justify-start">
               
               {/* Main Vertical Photo Card with Golden Border */}
-              <div className="relative w-full max-w-[420px] h-[520px] sm:h-[580px] rounded-2xl overflow-hidden shadow-2xl border-2 border-[#d4af37]/60 p-2 bg-[#f4ebe1]">
+              <div className="relative w-full max-w-[420px] h-[520px] sm:h-[580px] rounded-2xl shadow-2xl border-2 border-[#d4af37]/60 p-2 bg-[#f4ebe1]">
                 
                 <div className="relative w-full h-full rounded-xl overflow-hidden bg-neutral-900">
                   <img
-                    src="/destinations/kashmir.jpg"
+                    src="/destinations/dal_lake.jpg"
                     alt="Dal Lake Kashmir"
                     className="w-full h-full object-cover"
                   />
@@ -58,7 +58,7 @@ export default function WhoWeAre({ onOpenInquiry }) {
                 <div className="absolute -top-4 -right-4 sm:-right-8 w-36 sm:w-44 bg-white p-2 sm:p-2.5 rounded-sm shadow-2xl rotate-6 border border-neutral-200 z-20 transition-transform hover:scale-105 duration-200">
                   <div className="h-24 sm:h-28 w-full overflow-hidden bg-neutral-100">
                     <img 
-                      src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80" 
+                      src="/destinations/gulmarg_gondola.jpg" 
                       alt="Gulmarg Gondola" 
                       className="w-full h-full object-cover"
                     />
@@ -72,13 +72,13 @@ export default function WhoWeAre({ onOpenInquiry }) {
                 <div className="absolute -bottom-6 -left-4 sm:-left-8 w-36 sm:w-44 bg-white p-2 sm:p-2.5 rounded-sm shadow-2xl -rotate-6 border border-neutral-200 z-20 transition-transform hover:scale-105 duration-200">
                   <div className="h-24 sm:h-28 w-full overflow-hidden bg-neutral-100">
                     <img 
-                      src="/destinations/puri_hd.jpg" 
-                      alt="Puri Golden Beach" 
+                      src="/destinations/srinagar_garden.jpg" 
+                      alt="Srinagar Garden" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <p className="font-serif italic text-[11px] sm:text-xs text-center text-neutral-700 mt-1.5 font-medium">
-                    Puri Golden Beach
+                    Srinagar garden
                   </p>
                 </div>
 
@@ -145,16 +145,16 @@ export default function WhoWeAre({ onOpenInquiry }) {
                   </p>
                 </div>
 
-                {/* Card 2: Ministry / Govt. Approved */}
+                {/* Card 2: Luxury Resort Partnerships */}
                 <div className="bg-white p-3.5 rounded-xl border border-[#e2d5c3] shadow-sm space-y-1">
                   <div className="w-8 h-8 rounded-full bg-[#fcf8f0] border border-[#d4af37]/40 flex items-center justify-center text-[#c8923a]">
                     <ShieldCheck className="w-4 h-4" />
                   </div>
                   <h4 className="font-display font-bold text-neutral-900 text-xs sm:text-sm">
-                    Verified Fleet
+                    Luxury Resorts
                   </h4>
                   <p className="text-[11px] text-neutral-500">
-                    50+ In-house cabs
+                    60+ 5-Star partners
                   </p>
                 </div>
 
@@ -167,7 +167,7 @@ export default function WhoWeAre({ onOpenInquiry }) {
                     Personal Planners
                   </h4>
                   <p className="text-[11px] text-neutral-500">
-                    You talk to founders
+                    You talk to the founder
                   </p>
                 </div>
 

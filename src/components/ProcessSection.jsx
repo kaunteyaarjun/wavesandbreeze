@@ -15,12 +15,12 @@ export default function ProcessSection() {
     {
       num: '03',
       title: 'Coordinate & Clear',
-      desc: 'We coordinate hotels, airlines, chartered fleet logistics, audio-visual rigging, statutory clearances, and delegate secretariats.'
+      desc: 'We coordinate hotels, airlines, chartered group logistics, audio-visual rigging, statutory clearances, and delegate secretariats.'
     },
     {
       num: '04',
       title: 'Manage & Execute',
-      desc: 'Our founders and operational directors manage every detail on the ground, from airport arrivals and keynote staging to gala dinners.'
+      desc: 'Our founder and operational directors manage every detail on the ground, from airport arrivals and keynote staging to gala dinners.'
     }
   ];
 

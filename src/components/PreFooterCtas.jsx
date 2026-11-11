@@ -16,7 +16,7 @@ export default function PreFooterCtas({ onOpenInquiry }) {
                 Let's Plan Your Next MICE Management Solution.
               </h2>
               <p className="text-neutral-600 text-xs sm:text-base max-w-2xl leading-relaxed">
-                Tell us your target destination, delegate headcount, and operational requirements. Our founders and MICE directors will craft a tailored execution roadmap for your team.
+                Tell us your target destination, delegate headcount, and operational requirements. Our founder and MICE directors will craft a tailored execution roadmap for your team.
               </p>
             </div>
 
@@ -25,7 +25,7 @@ export default function PreFooterCtas({ onOpenInquiry }) {
                 onClick={() => onOpenInquiry()}
                 className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 bg-neutral-100 hover:bg-neutral-200 sm:bg-transparent text-black font-bold text-sm sm:text-lg py-3 px-5 sm:p-0 rounded-xl sm:rounded-none active:scale-98 transition-all group"
               >
-                <span>Speak With Our Founders</span>
+                <span>Speak With Our Founder</span>
                 <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#fff033] text-black flex items-center justify-center font-bold shrink-0">
                   <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>

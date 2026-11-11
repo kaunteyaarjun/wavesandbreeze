@@ -11,7 +11,7 @@ export const testimonialsData = [
   },
   {
     id: 2,
-    quote: "Biswaranjan and Sameer took personal ownership of our international executive offsite to Dubai. From chartered yachts at the Marina to private dune dinner setups, every single hour ran with clockwork precision.",
+    quote: "Biswaranjan and his team took personal ownership of our international executive offsite to Dubai. From chartered yachts at the Marina to private dune dinner setups, every single hour ran with clockwork precision.",
     author: "Ananya Sengupta",
     designation: "Director - Global Marketing",
     company: "FinTech Orbit Singapore",

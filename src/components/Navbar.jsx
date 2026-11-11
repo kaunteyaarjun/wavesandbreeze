@@ -23,7 +23,7 @@ const WhatsAppIcon = ({ className = "w-3.5 h-3.5" }) => (
 
 export default function Navbar({ onOpenInquiry }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeMegaMenu, setActiveMegaMenu] = useState(null); // 'odisha' | 'india' | 'international' | 'cabs' | null
+  const [activeMegaMenu, setActiveMegaMenu] = useState(null); // 'odisha' | 'india' | 'international' | null
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -31,10 +31,30 @@ export default function Navbar({ onOpenInquiry }) {
     } else {
       document.body.style.overflow = 'unset';
     }
-    return () => {
+    const openPackageInquiry = (destination, label, service = 'Odisha Tour & Holiday Package') => {
+    setActiveMegaMenu(null);
+    setMobileMenuOpen(false);
+    onOpenInquiry({
+      destination,
+      service,
+      notes: `Enquiring about ${label}`
+    });
+  };
+
+  return () => {
       document.body.style.overflow = 'unset';
     };
   }, [mobileMenuOpen]);
+
+  const openPackageInquiry = (destination, label, service = 'Odisha Tour & Holiday Package') => {
+    setActiveMegaMenu(null);
+    setMobileMenuOpen(false);
+    onOpenInquiry({
+      destination,
+      service,
+      notes: `Enquiring about ${label}`
+    });
+  };
 
   return (
     <header className="sticky top-0 z-50 transition-all duration-200">
@@ -151,9 +171,9 @@ export default function Navbar({ onOpenInquiry }) {
               </button>
             </div>
 
-            {/* Cabs ▾ */}
-            <a href="#fleet" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
-              Cabs &amp; Fleet
+            {/* Destinations */}
+            <a href="#destinations" className="px-3 py-1.5 rounded-full hover:bg-neutral-100 hover:text-black transition-colors">
+              Destinations
             </a>
 
             {/* Corporate MICE */}
@@ -230,7 +250,7 @@ export default function Navbar({ onOpenInquiry }) {
               {/* Left Promotional Image Card */}
               <div className="col-span-3 rounded-xl overflow-hidden relative shadow-md bg-neutral-900 group">
                 <img 
-                  src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" 
+                  src="/destinations/india_desert.jpg" 
                   alt="India Desert Tours" 
                   className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
                 />
@@ -277,13 +297,25 @@ export default function Navbar({ onOpenInquiry }) {
                       Tour packages
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Kashmir - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Kerala - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Sikkim - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Darjeeling - 5 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Andaman - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Rajasthan - 8 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°07</strong> Goa - 5 Days</a></li>
+                      {[
+                        { num: 'N°01', label: 'Kashmir - 7 Days', dest: 'Kashmir' },
+                        { num: 'N°02', label: 'Kerala - 7 Days', dest: 'Kerala' },
+                        { num: 'N°03', label: 'Sikkim - 6 Days', dest: 'Sikkim' },
+                        { num: 'N°04', label: 'Darjeeling - 5 Days', dest: 'Darjeeling' },
+                        { num: 'N°05', label: 'Andaman - 6 Days', dest: 'Andaman' },
+                        { num: 'N°06', label: 'Rajasthan - 8 Days', dest: 'Rajasthan' },
+                        { num: 'N°07', label: 'Goa - 5 Days', dest: 'Goa' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'India Domestic Tour Package')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -293,12 +325,24 @@ export default function Navbar({ onOpenInquiry }) {
                       <span>💖 Honeymoon Packages</span>
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Kerala Honeymoon - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Kashmir Honeymoon - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Andaman Honeymoon - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Sikkim Honeymoon - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Meghalaya Honeymoon - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Rajasthan Honeymoon - 7 Days</a></li>
+                      {[
+                        { num: 'N°01', label: 'Kerala Honeymoon - 6 Days', dest: 'Kerala' },
+                        { num: 'N°02', label: 'Kashmir Honeymoon - 6 Days', dest: 'Kashmir' },
+                        { num: 'N°03', label: 'Andaman Honeymoon - 6 Days', dest: 'Andaman' },
+                        { num: 'N°04', label: 'Sikkim Honeymoon - 6 Days', dest: 'Sikkim' },
+                        { num: 'N°05', label: 'Meghalaya Honeymoon - 6 Days', dest: 'Meghalaya' },
+                        { num: 'N°06', label: 'Rajasthan Honeymoon - 7 Days', dest: 'Rajasthan' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'India Domestic Tour Package')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -308,12 +352,24 @@ export default function Navbar({ onOpenInquiry }) {
                       <span>👨‍👩‍👧 Family Packages</span>
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Kerala Family - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Kashmir Family - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Andaman Family - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Rajasthan Family - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Sikkim Family - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Himachal Family - 7 Days</a></li>
+                      {[
+                        { num: 'N°01', label: 'Kerala Family - 7 Days', dest: 'Kerala' },
+                        { num: 'N°02', label: 'Kashmir Family - 7 Days', dest: 'Kashmir' },
+                        { num: 'N°03', label: 'Andaman Family - 6 Days', dest: 'Andaman' },
+                        { num: 'N°04', label: 'Rajasthan Family - 7 Days', dest: 'Rajasthan' },
+                        { num: 'N°05', label: 'Sikkim Family - 6 Days', dest: 'Sikkim' },
+                        { num: 'N°06', label: 'Himachal Family - 7 Days', dest: 'Himachal' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'India Domestic Tour Package')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -346,7 +402,7 @@ export default function Navbar({ onOpenInquiry }) {
               {/* Left Promotional Image Card */}
               <div className="col-span-3 rounded-xl overflow-hidden relative shadow-md bg-neutral-900 group">
                 <img 
-                  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" 
+                  src="/destinations/world_tours.jpg" 
                   alt="International Tours" 
                   className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
                 />
@@ -393,13 +449,25 @@ export default function Navbar({ onOpenInquiry }) {
                       Tour packages
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Dubai - 5 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Thailand - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Bali - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Singapore - 5 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Vietnam - 8 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Maldives - 5 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°07</strong> Europe - 10 Days</a></li>
+                      {[
+                        { num: 'N°01', label: 'Dubai - 5 Days', dest: 'Dubai' },
+                        { num: 'N°02', label: 'Thailand - 7 Days', dest: 'Thailand' },
+                        { num: 'N°03', label: 'Bali - 7 Days', dest: 'Bali' },
+                        { num: 'N°04', label: 'Singapore - 5 Days', dest: 'Singapore' },
+                        { num: 'N°05', label: 'Vietnam - 8 Days', dest: 'Vietnam' },
+                        { num: 'N°06', label: 'Maldives - 5 Days', dest: 'Maldives' },
+                        { num: 'N°07', label: 'Europe - 10 Days', dest: 'Europe' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'International Holiday Package')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -409,12 +477,24 @@ export default function Navbar({ onOpenInquiry }) {
                       Gulf, Europe &amp; Groups
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Abu Dhabi - 5 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Turkey - 8 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Switzerland - 7 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Egypt - 8 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Spain - 8 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Uzbekistan - 7 Days</a></li>
+                      {[
+                        { num: 'N°01', label: 'Abu Dhabi - 5 Days', dest: 'Abu Dhabi' },
+                        { num: 'N°02', label: 'Turkey - 8 Days', dest: 'Turkey' },
+                        { num: 'N°03', label: 'Switzerland - 7 Days', dest: 'Switzerland' },
+                        { num: 'N°04', label: 'Egypt - 8 Days', dest: 'Egypt' },
+                        { num: 'N°05', label: 'Spain - 8 Days', dest: 'Spain' },
+                        { num: 'N°06', label: 'Uzbekistan - 7 Days', dest: 'Uzbekistan' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'International Holiday Package')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -424,12 +504,24 @@ export default function Navbar({ onOpenInquiry }) {
                       <span>💖 Honeymoon Packages</span>
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Bali Honeymoon - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Maldives Honeymoon - 5 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Europe Honeymoon - 8 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Switzerland Honeymoon - 6 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Paris Honeymoon - 5 Days</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Dubai Honeymoon - 5 Days</a></li>
+                      {[
+                        { num: 'N°01', label: 'Bali Honeymoon - 6 Days', dest: 'Bali' },
+                        { num: 'N°02', label: 'Maldives Honeymoon - 5 Days', dest: 'Maldives' },
+                        { num: 'N°03', label: 'Europe Honeymoon - 8 Days', dest: 'Europe' },
+                        { num: 'N°04', label: 'Switzerland Honeymoon - 6 Days', dest: 'Switzerland' },
+                        { num: 'N°05', label: 'Paris Honeymoon - 5 Days', dest: 'Europe' },
+                        { num: 'N°06', label: 'Dubai Honeymoon - 5 Days', dest: 'Dubai' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'International Holiday Package')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -498,7 +590,7 @@ export default function Navbar({ onOpenInquiry }) {
                   <span>❖</span>
                   <span className="hover:text-black cursor-pointer">HILL STATIONS</span>
                   <span>❖</span>
-                  <span className="hover:text-black cursor-pointer">CAB RENTALS</span>
+                  <span className="hover:text-black cursor-pointer">SPIRITUAL &amp; MICE</span>
                 </div>
 
                 <div className="grid grid-cols-3 gap-6 text-xs">
@@ -509,27 +601,51 @@ export default function Navbar({ onOpenInquiry }) {
                       Signature Odisha Circuits
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Golden Triangle (Puri-Konark-BBSR)</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Chilika Lagoon &amp; Dolphin Safari</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Daringbadi (Kashmir of Odisha)</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Bhitarkanika Mangrove Safari</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Similipal Tiger Reserve &amp; Falls</a></li>
-                      <li><a href="#packages" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> Puri VIP Jagannath Darshan</a></li>
+                      {[
+                        { num: 'N°01', label: 'Golden Triangle (Puri-Konark-BBSR)', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°02', label: 'Chilika Lagoon & Dolphin Safari', dest: 'Chilika Lake & Mangalajodi' },
+                        { num: 'N°03', label: 'Daringbadi (Kashmir of Odisha)', dest: 'Daringbadi Hill Station' },
+                        { num: 'N°04', label: 'Bhitarkanika Mangrove Safari', dest: 'Bhitarkanika Wildlife Safari' },
+                        { num: 'N°05', label: 'Similipal Tiger Reserve & Falls', dest: 'Bhitarkanika Wildlife Safari' },
+                        { num: 'N°06', label: 'Puri VIP Jagannath Darshan', dest: 'Puri & Golden Triangle' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'Odisha Tour & Holiday Package')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
-                  {/* Column 2: Cab & Fleet Rentals */}
+                  {/* Column 2: Pilgrimage & Cultural Stays */}
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-2.5 pb-1 border-b border-neutral-200">
-                      Verified Cab Fleet
+                      Pilgrimage &amp; Cultural Stays
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Toyota Innova Crysta (6-7 Seats)</a></li>
-                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Swift Dzire / Sedan (4 Seats)</a></li>
-                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Force Urbania (12-17 Seats)</a></li>
-                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> Volvo Luxury AC Bus (35-45 Seats)</a></li>
-                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Bhubaneswar to Puri Cab (₹1,499)</a></li>
-                      <li><a href="#fleet" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°06</strong> BBI Airport Pick-and-Drop</a></li>
+                      {[
+                        { num: 'N°01', label: 'Shree Jagannath Temple VIP Darshan', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°02', label: 'Konark Sun Temple Heritage Walk', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°03', label: 'Bhubaneswar Lingaraj & Caves Tour', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°04', label: 'Raghurajpur Artisan Village Trail', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°05', label: 'Gopalpur-on-Sea Beach Retreat', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°06', label: 'Konark Marine Drive Eco-Retreat', dest: 'Puri & Golden Triangle' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'Puri Jagannath VIP Darshan & Coastal')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -539,11 +655,23 @@ export default function Navbar({ onOpenInquiry }) {
                       Corporate MICE &amp; Stays
                     </h4>
                     <ul className="space-y-2 text-neutral-700">
-                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°01</strong> Puri Oceanfront Conclaves</a></li>
-                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°02</strong> Bhubaneswar Mega Conventions</a></li>
-                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°03</strong> Eco-Retreat Glamping Bookings</a></li>
-                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°04</strong> 5-Star Hotel Alliances (Mayfair/ITC)</a></li>
-                      <li><a href="#services" className="hover:text-[#d97706] transition-colors block"><strong className="text-[10px] text-neutral-400 font-mono">N°05</strong> Dealer Incentive Meets</a></li>
+                      {[
+                        { num: 'N°01', label: 'Puri Oceanfront Conclaves', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°02', label: 'Bhubaneswar Mega Conventions', dest: 'Bhubaneswar Convention & MICE' },
+                        { num: 'N°03', label: 'Eco-Retreat Glamping Bookings', dest: 'Puri & Golden Triangle' },
+                        { num: 'N°04', label: '5-Star Hotel Alliances (Mayfair/ITC)', dest: 'Bhubaneswar Convention & MICE' },
+                        { num: 'N°05', label: 'Dealer Incentive Meets', dest: 'Bhubaneswar Convention & MICE' }
+                      ].map((item) => (
+                        <li key={item.num}>
+                          <button
+                            type="button"
+                            onClick={() => openPackageInquiry(item.dest, item.label, 'Corporate MICE / Offsite / Conference')}
+                            className="hover:text-[#d97706] transition-colors block text-left w-full"
+                          >
+                            <strong className="text-[10px] text-neutral-400 font-mono">{item.num}</strong> {item.label}
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -599,11 +727,11 @@ export default function Navbar({ onOpenInquiry }) {
               International Packages (Dubai, Singapore, Thailand)
             </a>
             <a 
-              href="#fleet" 
+              href="#destinations" 
               onClick={() => setMobileMenuOpen(false)} 
               className="block text-lg font-bold text-black border-b border-neutral-100 pb-2.5"
             >
-              Cabs &amp; Fleet Rentals
+              Curated Destinations
             </a>
             <a 
               href="#services" 
@@ -631,15 +759,11 @@ export default function Navbar({ onOpenInquiry }) {
           <div className="pt-6 border-t border-neutral-200 space-y-3 pb-8">
             <div className="bg-neutral-50 p-4 rounded-xl space-y-2 border border-neutral-100">
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#d97706] block">
-                DIRECT FOUNDER HOTLINES (BBSR HQ)
+                DIRECT FOUNDER HOTLINE (BBSR HQ)
               </span>
               <a href="tel:9040577429" className="text-sm font-bold text-black flex items-center gap-2">
                 <Phone className="w-4 h-4 text-black" />
                 <span>Biswaranjan Behera: +91 9040577429</span>
-              </a>
-              <a href="tel:8249657614" className="text-sm font-bold text-black flex items-center gap-2">
-                <Phone className="w-4 h-4 text-black" />
-                <span>Sameer Kumar Panigrahi: +91 8249657614</span>
               </a>
             </div>
 

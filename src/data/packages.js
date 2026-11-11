@@ -6,7 +6,7 @@ export const tourPackagesData = [
     category: 'Odisha Holidays',
     badge: 'Most Popular',
     destination: 'Bhubaneswar • Puri • Konark',
-    image: '/destinations/puri.jpg',
+    image: '/destinations/jagannath.jpg',
     idealFor: 'Families, Couples & Pilgrimage Travelers',
     route: 'Bhubaneswar Airport (BBI) → Dhauli → Puri Beach → Konark → Bhubaneswar',
     highlights: [
@@ -17,9 +17,9 @@ export const tourPackagesData = [
     ],
     inclusions: [
       '3 Nights 4/5-Star Beach & City Hotels',
-      'Dedicated AC Sedan / Innova Crysta for all transfers',
+      'Guided Temple Darshan & Local Sightseeing Coordination',
       'Daily breakfast and curated dinners',
-      'Toll, parking, interstate permits & driver allowance'
+      'Toll, parking, interstate permits & on-ground concierge'
     ],
     description: 'The definitive Odisha experience. Explore millennium-old temple architecture in Bhubaneswar, seek blessings at the sacred Jagannath Temple in Puri, and marvel at the 13th-century chariot wheels of Konark Sun Temple.'
   },
@@ -30,7 +30,7 @@ export const tourPackagesData = [
     category: 'Wildlife & Nature',
     badge: 'Scenic Lagoon',
     destination: 'Puri • Satapada • Chilika Lagoon',
-    image: '/destinations/chilika.jpg',
+    image: '/destinations/chilika_hd.jpg',
     idealFor: 'Nature Lovers, Photographers & Weekend Escapes',
     route: 'Bhubaneswar → Puri Coast → Satapada (Chilika) → Mangalajodi → BBI Airport',
     highlights: [
@@ -42,7 +42,7 @@ export const tourPackagesData = [
     inclusions: [
       '2 Nights luxury coastal stay at Puri / OTDC Panthanivas',
       'Exclusive chartered boat safari with life jackets & safety gear',
-      'All airport / railway station transfers in AC vehicle',
+      'Confirmed airport / station arrivals & sightseeing transfers',
       'Complimentary mineral water and refreshments on-board'
     ],
     description: 'Breathe in the tranquil ocean breeze across Chilika Lake. Witness playful Irrawaddy dolphins, explore remote sandbar islands, and relax along Puri’s golden coastline.'
@@ -65,8 +65,8 @@ export const tourPackagesData = [
     ],
     inclusions: [
       '3 Nights in cozy nature cottages / Eco-Retreat resort',
-      'Dedicated high-ground-clearance AC SUV for mountain terrain',
-      'Experienced local chauffeur familiar with scenic forest corridors',
+      'Scheduled mountain excursion & valley sightseeing transfers',
+      'Guided coffee plantation & Mandasaru gorge exploration',
       'All meals (Breakfast, Lunch & Dinner featuring fresh local organic produce)'
     ],
     description: 'Perched at 3,000 feet above sea level in Kandhamal district, Daringbadi is Odisha’s only hill station that experiences sub-zero winter temperatures, pine canopies, and lush green valleys.'
@@ -78,7 +78,7 @@ export const tourPackagesData = [
     category: 'Wildlife & Nature',
     badge: 'Wildlife Sanctuary',
     destination: 'Bhitarkanika • Dangmal • Chandbali',
-    image: '/destinations/bhitarkanika.jpg',
+    image: '/destinations/bhitarkanika_hd.jpg',
     idealFor: 'Wildlife Enthusiasts, Eco-Tourists & Families',
     route: 'Bhubaneswar → Kendrapara → Khola Gate / Gupti → Dangmal → Bhubaneswar',
     highlights: [
@@ -90,7 +90,7 @@ export const tourPackagesData = [
     inclusions: [
       '2 Nights in Swiss luxury tents / river resort',
       'Authorized forest department boat permits & certified naturalist guide',
-      'Comfortable AC transport from Bhubaneswar & return',
+      'End-to-end itinerary coordination from Bhubaneswar & return',
       'Full-board dining throughout the wildlife expedition'
     ],
     description: 'Often called the "Amazon of Odisha," Bhitarkanika National Park offers an untamed mangrove labyrinth teeming with prehistoric estuarine crocodiles, kingfishers, and rare coastal fauna.'
@@ -114,7 +114,7 @@ export const tourPackagesData = [
     inclusions: [
       '3 Nights in OTDC Aranya Nivas / Eco-Cottages inside reserve boundary',
       'Authorized forest entry permits & official forest department guide',
-      'Dedicated AC vehicle for road transfers & approved safari jeeps',
+      'Forest reserve entry coordination & approved wildlife safari jeeps',
       'All local meals and packed safari refreshments'
     ],
     description: 'Immerse in the untamed wilderness of Similipal, Asia’s vast biosphere reserve spanning cascading waterfalls, towering sal trees, and India’s famous melanistic tiger corridor.'
@@ -126,7 +126,7 @@ export const tourPackagesData = [
     category: 'Corporate MICE',
     badge: 'MICE Flagship',
     destination: 'Puri & Konark Coast',
-    image: '/destinations/konark.jpg',
+    image: '/destinations/puri_hd.jpg',
     idealFor: 'Annual Leadership Summits, CXO Meets & Dealer Incentives',
     route: 'BBI Airport → Puri 5-Star Resort → Konark Marine Drive → Return',
     highlights: [
@@ -138,7 +138,7 @@ export const tourPackagesData = [
     inclusions: [
       '5-Star Oceanfront Resort booking (Mayfair Waves / Sterling Puri)',
       'Concert-grade sound, stage fabrication & technical AV rigging',
-      'Dedicated corporate airport concierge and luxury AC Volvo buses',
+      'Dedicated corporate airport concierge & delegate logistics desk',
       'Turnkey delegate registration, event branding & bespoke gifting'
     ],
     description: 'Unite your company’s top executives against the backdrop of the Bay of Bengal. From high-focus strategy boardrooms to celebratory beachfront awards nights.'
@@ -161,45 +161,58 @@ export const tourPackagesData = [
     ],
     inclusions: [
       'Preferred corporate tariffs at Mayfair Lagoon, Welcomhotel by ITC, or Vivanta',
-      'Dedicated on-site operations team led personally by company founders',
+      'Dedicated on-site operations team led personally by company founder',
       'Comprehensive statutory permits, security protocol & fire safety clearances',
-      'VIP airport meet-and-greet fleet with sanitized luxury sedans and coaches'
+      'VIP airport meet-and-greet & group convention desk orchestration'
     ],
     description: 'Odisha’s high-tech capital provides the ultimate infrastructure for national trade congresses, medical symposiums, and industrial product unveilings.'
-  }
-];
-
-export const fleetVehicles = [
-  {
-    name: 'Toyota Innova Crysta',
-    category: 'Premium SUV',
-    capacity: '6 - 7 Passengers + Chauffeur',
-    idealFor: 'VIP Tours, Family Holidays & Corporate Delegations',
-    features: ['Plush Leather Captain Seats', 'Dual Tri-Zone Climate Control', 'Large Luggage Boot', 'Bottled Water & USB Ports'],
-    tag: 'Most Booked'
   },
   {
-    name: 'Swift Dzire / Etios',
-    category: 'Executive Sedan',
-    capacity: '4 Passengers + Chauffeur',
-    idealFor: 'Airport Transfers, City Sightseeing & Couple Holidays',
-    features: ['Clean Chilled AC', 'Punctual Verified Driver', 'Smooth Highway Ride', 'Bhubaneswar-Puri Express Spec'],
-    tag: 'Budget Luxury'
+    id: 'kashmir-paradise-escape',
+    title: 'Kashmir Paradise, Dal Lake Shikara & Gulmarg Valley',
+    duration: '6 Days / 5 Nights',
+    category: 'India Holidays',
+    badge: 'Himalayan Classic',
+    destination: 'Kashmir',
+    image: '/destinations/kashmir_meadow.jpg',
+    idealFor: 'Honeymoons, Families & Winter Snow Seekers',
+    route: 'Srinagar Dal Lake → Gulmarg Gondola → Pahalgam Betaab Valley → Sonmarg',
+    highlights: [
+      'Luxury Dal Lake houseboat stay & sunset Shikara ride',
+      'Gulmarg Phase 1 & 2 Gondola cable car snow experience',
+      'Nishat Bagh & Shalimar Bagh Mughal garden guided tour',
+      'Scenic pine valleys of Pahalgam & Betaab Valley'
+    ],
+    inclusions: [
+      '4 Nights 4-Star Srinagar/Pahalgam Hotels + 1 Night Deluxe Houseboat',
+      'Daily Kashmiri breakfast & gourmet dinner plans',
+      'Sightseeing & Gulmarg Gondola ticket coordination',
+      '24/7 trip desk support from Bhubaneswar'
+    ],
+    description: 'Experience snow-laden Himalayan slopes, Nishat Mughal gardens, and tranquil Dal Lake houseboats planned end-to-end from Bhubaneswar.'
   },
   {
-    name: 'Force Urbania / Tempo Traveller',
-    category: 'Luxury Mini Coach',
-    capacity: '12 / 17 / 26 Reclining Seats',
-    idealFor: 'Group Tours, Extended Families & MICE Delegations',
-    features: ['Push-back Reclining Seats', 'High Ceiling & Individual AC Vents', 'Surround Sound & Mic System', 'Generous Luggage Bay'],
-    tag: 'Group Travel'
-  },
-  {
-    name: 'Volvo / BharatBenz Luxury Coach',
-    category: 'Heavy Corporate Coach',
-    capacity: '35 - 45 Executive Seats',
-    idealFor: 'Mega Conventions, Factory Visits & University Delegations',
-    features: ['Air Suspension Smooth Transit', 'Full Panoramic Tinted Windows', 'Emergency First-Aid Equipped', 'Uniformed Chauffeur & Attendant'],
-    tag: 'MICE Fleet'
+    id: 'bali-island-sanctuary',
+    title: 'Bali Island Temples, Ubud Villas & Coastal Sunset Tour',
+    duration: '7 Days / 6 Nights',
+    category: 'International',
+    badge: 'Island Escape',
+    destination: 'Bali',
+    image: '/destinations/bali.jpg',
+    idealFor: 'Couples, Honeymooners & Incentive Groups',
+    route: 'Kuta / Seminyak Beach → Ubud Royal Villas → Ulun Danu Bratan Temple → Nusa Penida',
+    highlights: [
+      'Scenic lake temple visit at Pura Ulun Danu Bratan & Tanah Lot sunset',
+      'Full-day Nusa Penida island cruise & Kelingking Cliff excursion',
+      'Ubud Tegalalang rice terraces, Sacred Monkey Forest & swing experience',
+      'Luxury private pool villa stays & Balinese spa inclusions'
+    ],
+    inclusions: [
+      '6 Nights 4/5-Star Resorts & Ubud Pool Villa',
+      'Private guided tours, island ferry tickets & entrance passes',
+      'Daily buffet breakfasts & sunset beach dinner',
+      'Complete visa assistance & flight routing guidance'
+    ],
+    description: 'Lush volcanic lakes, iconic water temples, and private pool villas across Ubud and Nusa Penida crafted seamlessly for couples and executive groups.'
   }
 ];

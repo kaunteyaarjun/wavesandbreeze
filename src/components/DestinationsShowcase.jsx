@@ -10,7 +10,7 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       state: 'Odisha',
       tag: 'BEACH RESORTS & PILGRIMAGE',
       desc: 'Blue Flag Golden Beach, Mayfair Waves, open-air starry galas, luxury oceanfront retreats, and VIP Shree Jagannath Temple Darshan.',
-      image: '/destinations/puri.jpg'
+      image: '/destinations/jagannath.jpg'
     },
     {
       id: 'bhubaneswar',
@@ -18,7 +18,7 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       state: 'Odisha',
       tag: 'HERITAGE CAPITAL & EXPOS',
       desc: 'Smart capital city, Ekamra millennium temple circuits, mega auditoriums at Janata Maidan, Mayfair Lagoon, and Vivanta convention halls.',
-      image: '/destinations/bhubaneswar.jpg'
+      image: '/destinations/lingaraj_hd.jpg'
     },
     {
       id: 'konark',
@@ -26,7 +26,7 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       state: 'Odisha',
       tag: 'UNESCO SUN TEMPLE & GLAMPING',
       desc: 'Architectural wonder of the 13th-century Sun Temple, Marine Drive luxury Swiss tent glamping, private cultural evenings, and sand dunes.',
-      image: '/destinations/konark.jpg'
+      image: '/destinations/konark_hd.jpg'
     },
     {
       id: 'chilika',
@@ -50,7 +50,7 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       state: 'Odisha',
       tag: 'WILDLIFE SAFARIS & WATERFALLS',
       desc: 'Estuarine crocodile creek safaris, Barehipani waterfalls, tiger reserve canopy trails, and pristine forest eco-cottage stays.',
-      image: '/destinations/bhitarkanika.jpg'
+      image: '/destinations/bhitarkanika_hd.jpg'
     },
     {
       id: 'dubai',
@@ -58,7 +58,7 @@ export default function DestinationsShowcase({ onOpenInquiry }) {
       state: 'International Hubs',
       tag: 'GLOBAL CONVENTIONS & LUXURY',
       desc: 'Dubai World Trade Centre, luxury Dubai Marina yacht galas, Burj Khalifa VIP access, and premier international incentive circuits.',
-      image: '/destinations/dubai.jpg'
+      image: '/destinations/dubai_hd.jpg'
     }
   ];
 

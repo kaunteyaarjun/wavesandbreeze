@@ -24,43 +24,47 @@ export default function FoundersSection({ onOpenInquiry }) {
           </div>
           <div className="lg:col-span-4">
             <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
-              No middle-tier account managers or fragmented hand-offs. When you choose Waves &amp; Breeze Hospitality, our founders personally architect and oversee your MICE management on the ground.
+              No middle-tier account managers or fragmented hand-offs. When you choose Waves &amp; Breeze Hospitality, our founder personally architects and oversees your travel and MICE management on the ground.
             </p>
           </div>
         </div>
 
-        {/* Founders Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-14">
+        {/* Executive Founder Spotlight Card */}
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 mb-10 sm:mb-14">
           {founders.map((founder, idx) => (
             <div
               key={idx}
-              className="bg-neutral-50 rounded-none p-6 sm:p-12 border border-neutral-200 flex flex-col justify-between hover:border-black transition-all group"
+              className="bg-neutral-50 rounded-none p-6 sm:p-10 lg:p-12 border border-neutral-200 flex flex-col lg:flex-row lg:items-center justify-between gap-8 hover:border-black transition-all group"
             >
-              <div>
-                <div className="flex items-center justify-between mb-6 sm:mb-8">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black text-[#fff033] font-display font-black text-xl sm:text-2xl flex items-center justify-center">
+              <div className="lg:max-w-2xl">
+                <div className="flex items-center gap-4 mb-5 sm:mb-6">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black text-[#fff033] font-display font-black text-xl sm:text-2xl flex items-center justify-center shrink-0">
                     {founder.initials}
                   </div>
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 sm:px-3 py-1 bg-white border border-neutral-300 text-neutral-800">
-                    {founder.role}
-                  </span>
+                  <div>
+                    <span className="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 sm:px-3 py-1 bg-white border border-neutral-300 text-neutral-800 mb-1.5">
+                      {founder.role}
+                    </span>
+                    <h3 className="font-display text-2xl sm:text-3xl font-bold text-black">
+                      {founder.name}
+                    </h3>
+                  </div>
                 </div>
 
-                <h3 className="font-display text-2xl sm:text-3xl font-bold text-black mb-1">
-                  {founder.name}
-                </h3>
-                <p className="text-xs font-bold uppercase tracking-wider text-neutral-600 mb-3 sm:mb-4">
-                  {founder.title} • {founder.experience}
-                </p>
+                {founder.focus && (
+                  <p className="text-xs font-bold uppercase tracking-wider text-neutral-600 mb-3">
+                    {founder.focus}
+                  </p>
+                )}
 
-                <p className="text-neutral-600 text-xs sm:text-base leading-relaxed mb-6 sm:mb-8">
+                <p className="text-neutral-600 text-xs sm:text-base leading-relaxed">
                   {founder.bio}
                 </p>
               </div>
 
               {/* Direct Contacts - Touch Friendly on Phone */}
-              <div className="pt-5 sm:pt-6 border-t border-neutral-200 space-y-3">
-                <div className="flex items-center justify-between text-xs sm:text-sm">
+              <div className="pt-5 lg:pt-0 lg:pl-8 border-t lg:border-t-0 lg:border-l border-neutral-200 space-y-3 lg:min-w-[290px] shrink-0">
+                <div className="flex items-center justify-between gap-4 text-xs sm:text-sm">
                   <span className="text-neutral-500 font-medium">Direct Mobile:</span>
                   <a
                     href={`tel:${founder.phone}`}
@@ -71,7 +75,7 @@ export default function FoundersSection({ onOpenInquiry }) {
                   </a>
                 </div>
 
-                <div className="flex items-center justify-between text-xs sm:text-sm">
+                <div className="flex items-center justify-between gap-4 text-xs sm:text-sm">
                   <span className="text-neutral-500 font-medium">WhatsApp:</span>
                   <a
                     href={`https://wa.me/${founder.whatsapp}?text=Hello%20${encodeURIComponent(founder.name)}%2C%20I%20want%20to%20discuss%20a%20corporate%20MICE%20management%20requirement.`}

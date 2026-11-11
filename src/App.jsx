@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MiceStrip from './components/MiceStrip';
 import TourPackagesSection from './components/TourPackagesSection';
-import FleetRentalSection from './components/FleetRentalSection';
 import WhoWeAre from './components/WhoWeAre';
 import ServicesList from './components/ServicesList';
 import StrategyToExecution from './components/StrategyToExecution';
@@ -36,19 +35,16 @@ export default function App() {
         {/* 2. Hero Section */}
         <Hero onOpenInquiry={handleOpenInquiry} />
 
-        {/* 3. Black 4-Pillar Strip (Tours • MICE • Cabs • Hotels) */}
+        {/* 3. Black 4-Pillar Strip (Tours • MICE • Holidays • Hotels) */}
         <MiceStrip />
 
-        {/* 4. Curated Odisha Tours & Holiday Packages */}
+        {/* 4. Curated Odisha, India & International Tour Packages */}
         <TourPackagesSection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 5. Verified Cab & Fleet Rentals Across Odisha */}
-        <FleetRentalSection onOpenInquiry={handleOpenInquiry} />
-
-        {/* 6. Who We Are: Trusted Odisha Travel DMC & Corporate MICE Partner */}
+        {/* 5. Who We Are: Trusted Odisha Travel DMC & Corporate MICE Partner */}
         <WhoWeAre onOpenInquiry={handleOpenInquiry} />
 
-        {/* 7. Comprehensive Travel, Fleet & MICE Services */}
+        {/* 6. Comprehensive Travel, Resort & MICE Services */}
         <ServicesList onOpenInquiry={handleOpenInquiry} />
 
         {/* 8. From Strategy to On-Ground Execution */}

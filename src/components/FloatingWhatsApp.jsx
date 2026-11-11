@@ -26,7 +26,7 @@ export default function FloatingWhatsApp() {
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse" />
               <span className="font-display font-bold text-sm text-black">
-                WhatsApp Founders Directly
+                WhatsApp Founder Directly
               </span>
             </div>
             <button 
@@ -54,23 +54,6 @@ export default function FloatingWhatsApp() {
                 <span className="text-[10px] font-extrabold uppercase text-neutral-400 block">Founder</span>
                 <span className="text-xs font-bold text-black block">{teamData.founders[0].name}</span>
                 <span className="text-[11px] text-neutral-500 font-medium">+91 {teamData.founders[0].phone}</span>
-              </div>
-              <div className="w-9 h-9 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow">
-                <WhatsAppIcon className="w-5 h-5 text-white" />
-              </div>
-            </a>
-
-            {/* Sameer */}
-            <a
-              href={`https://wa.me/${teamData.founders[1].whatsapp}?text=Hello%20Sameer%20Kumar%20Panigrahi%2C%20I%20want%20to%20plan%20a%20corporate%20MICE%20management%20solution.`}
-              target="_blank"
-              rel="noreferrer"
-              className="p-3 rounded-xl bg-neutral-50 hover:bg-[#25D366]/10 active:bg-[#25D366]/20 border border-neutral-200 flex items-center justify-between group transition-colors"
-            >
-              <div>
-                <span className="text-[10px] font-extrabold uppercase text-neutral-400 block">Co-Founder</span>
-                <span className="text-xs font-bold text-black block">{teamData.founders[1].name}</span>
-                <span className="text-[11px] text-neutral-500 font-medium">+91 {teamData.founders[1].phone}</span>
               </div>
               <div className="w-9 h-9 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow">
                 <WhatsAppIcon className="w-5 h-5 text-white" />
